@@ -18,11 +18,7 @@ export default function AnimatedTicker() {
     <div className="overflow-hidden border-y border-white/10 bg-[#002C2F] py-5 text-white">
       <motion.div
         animate={{ x: ["0%", "-50%"] }}
-        transition={{
-          duration: 24,
-          repeat: Infinity,
-          ease: "linear",
-        }}
+        transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
         className="flex w-max gap-10 whitespace-nowrap"
       >
         {[...words, ...words, ...words, ...words].map((word, index) => (

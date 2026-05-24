@@ -63,27 +63,15 @@ const skills = [
 ];
 
 const resumeExperience = [
-  {
-    role: "Engineer",
-    company: "AECOM",
-    date: "Oct 2023 – Present",
-  },
-  {
-    role: "Engineering Intern",
-    company: "Tasyapi Insaat",
-    date: "Jul 2021 – Aug 2021",
-  },
+  { role: "Engineer", company: "AECOM", date: "Oct 2023 – Present" },
+  { role: "Engineering Intern", company: "Tasyapi Insaat", date: "Jul 2021 – Aug 2021" },
   {
     role: "Engineering Intern",
     company:
       "Planning and Construction Department, Ministry of Transport and Infrastructure",
     date: "Jun 2020 – Jul 2020",
   },
-  {
-    role: "Apprentice / Assistant Worker",
-    company: "Asik Trading",
-    date: "Jun 2017 – Aug 2017",
-  },
+  { role: "Apprentice / Assistant Worker", company: "Asik Trading", date: "Jun 2017 – Aug 2017" },
 ];
 
 const education = [
@@ -107,8 +95,9 @@ const memberships = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#003C3F] text-white">
+    <main className="relative min-h-screen overflow-hidden bg-[#003C3F] text-white">
       <MouseGlow />
+
       {/* Hero */}
       <section className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 py-8 lg:px-8">
         <TransportLines />
@@ -122,21 +111,11 @@ export default function Home() {
           </Link>
 
           <div className="hidden items-center gap-8 text-sm text-white/75 md:flex">
-            <a href="#about" className="hover:text-white">
-              About
-            </a>
-            <a href="#services" className="hover:text-white">
-              Expertise
-            </a>
-            <a href="#resume" className="hover:text-white">
-              Resume
-            </a>
-            <Link href="/projects" className="hover:text-white">
-              Projects
-            </Link>
-            <a href="#contact" className="hover:text-white">
-              Contact
-            </a>
+            <a href="#about" className="hover:text-white">About</a>
+            <a href="#services" className="hover:text-white">Expertise</a>
+            <a href="#resume" className="hover:text-white">Resume</a>
+            <Link href="/projects" className="hover:text-white">Projects</Link>
+            <a href="#contact" className="hover:text-white">Contact</a>
           </div>
         </nav>
 
@@ -160,13 +139,13 @@ export default function Home() {
 
             <Reveal delay={0.15}>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                 <MagneticLink
+                <MagneticLink
                   href="/projects"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#B6D957] px-6 py-3 text-sm font-semibold text-[#003C3F] transition hover:bg-[#CBEA6A]"
                 >
                   View Projects
                   <ArrowRight size={18} />
-                 </MagneticLink>
+                </MagneticLink>
 
                 <a
                   href="#contact"
@@ -179,7 +158,7 @@ export default function Home() {
           </section>
 
           <Reveal delay={0.2}>
-            <section className="rounded-3xl border border-white/10 bg-[#002C2F]/80 p-8 shadow-2xl backdrop-blur-sm">
+            <section className="animate-[float_6s_ease-in-out_infinite] rounded-3xl border border-white/10 bg-[#002C2F]/80 p-8 shadow-2xl backdrop-blur-sm">
               <div className="flex flex-col items-center text-center">
                 <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-[#B6D957]/50 shadow-2xl">
                   <Image
@@ -200,30 +179,29 @@ export default function Home() {
                 <p className="mt-2 text-[#B6D957]">Traffic Engineer</p>
 
                 <p className="mt-4 max-w-md text-sm leading-6 text-white/75">
-                  Roads · Streets · Active Travel · Traffic Modelling · Public
-                  Transport
+                  Roads · Streets · Active Travel · Traffic Modelling · Public Transport
                 </p>
 
                 <div className="mt-8 grid w-full grid-cols-2 gap-4 text-sm text-white/80">
-                  <div className="rounded-xl bg-[#003C3F]/70 p-4">
-                    Road Design
-                  </div>
-                  <div className="rounded-xl bg-[#003C3F]/70 p-4">
-                    Active Travel
-                  </div>
-                  <div className="rounded-xl bg-[#003C3F]/70 p-4">
-                    Traffic Signals
-                  </div>
-                  <div className="rounded-xl bg-[#003C3F]/70 p-4">
-                    PTV Vissim
-                  </div>
+                  {["Road Design", "Active Travel", "Traffic Signals", "PTV Vissim"].map(
+                    (item) => (
+                      <div
+                        key={item}
+                        className="rounded-xl bg-[#003C3F]/70 p-4 transition hover:bg-[#B6D957] hover:text-[#003C3F]"
+                      >
+                        {item}
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
             </section>
           </Reveal>
         </div>
       </section>
+
       <AnimatedTicker />
+
       {/* About Me */}
       <section id="about" className="bg-white px-6 py-24 text-[#003C3F]">
         <div className="mx-auto max-w-7xl">
@@ -242,7 +220,7 @@ export default function Home() {
                     alt="Huseyin Alsan, Traffic Engineer"
                     width={900}
                     height={700}
-                    className="h-[360px] w-full object-cover object-center"
+                    className="h-[360px] w-full object-cover object-center transition duration-700 hover:scale-105"
                   />
                 </div>
 
@@ -252,12 +230,18 @@ export default function Home() {
                   </p>
 
                   <div className="mt-5 grid grid-cols-2 gap-4 text-sm font-medium text-[#003C3F]">
-                    <div>Road Design</div>
-                    <div>Active Travel</div>
-                    <div>Traffic Modelling</div>
-                    <div>Public Transport</div>
-                    <div>Traffic Signals</div>
-                    <div>Urban Streets</div>
+                    {[
+                      "Road Design",
+                      "Active Travel",
+                      "Traffic Modelling",
+                      "Public Transport",
+                      "Traffic Signals",
+                      "Urban Streets",
+                    ].map((item) => (
+                      <div key={item} className="transition hover:translate-x-1">
+                        {item}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -307,7 +291,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills & Industry Knowledge */}
+      {/* Skills */}
       <section className="bg-[#F4F7EF] px-6 py-24 text-[#003C3F]">
         <Reveal className="mx-auto max-w-4xl border-t border-[#003C3F] pt-14">
           <h2 className="text-center font-[var(--font-space-grotesk)] text-4xl font-medium tracking-tight text-[#7EA629]">
@@ -316,7 +300,7 @@ export default function Home() {
 
           <div className="mx-auto mt-12 grid max-w-3xl gap-x-20 gap-y-6 text-xl leading-8 md:grid-cols-2">
             {skills.map((skill) => (
-              <p key={skill} className="text-[#003C3F]">
+              <p key={skill} className="transition hover:translate-x-2 text-[#003C3F]">
                 {skill}
               </p>
             ))}
@@ -325,7 +309,7 @@ export default function Home() {
           <div className="mt-16 flex justify-center">
             <MagneticLink
               href={linkedinUrl}
-              external         
+              external
               className="inline-flex items-center justify-center gap-3 border-2 border-[#B6D957] px-10 py-5 text-sm font-bold uppercase tracking-[0.25em] text-[#003C3F] transition hover:bg-[#B6D957]"
             >
               Visit My LinkedIn
@@ -344,8 +328,7 @@ export default function Home() {
             </p>
 
             <h2 className="mt-4 font-[var(--font-space-grotesk)] text-4xl font-bold tracking-tight">
-              Traffic engineering expertise focused on safe and efficient
-              movement.
+              Traffic engineering expertise focused on safe and efficient movement.
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-slate-600">
@@ -361,8 +344,8 @@ export default function Home() {
 
               return (
                 <Reveal key={service.title} delay={index * 0.08}>
-                  <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-                    <div className="mb-5 inline-flex rounded-xl bg-[#003C3F] p-3 text-[#B6D957]">
+                  <div className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div className="mb-5 inline-flex rounded-xl bg-[#003C3F] p-3 text-[#B6D957] transition group-hover:rotate-6 group-hover:scale-110">
                       <Icon size={24} />
                     </div>
 
@@ -412,12 +395,13 @@ export default function Home() {
 
                   <div className="mt-8 grid gap-8 md:grid-cols-2">
                     {resumeExperience.map((item) => (
-                      <div key={`${item.role}-${item.company}`}>
+                      <div
+                        key={`${item.role}-${item.company}`}
+                        className="transition hover:translate-x-2"
+                      >
                         <h4 className="font-bold text-white">{item.role}</h4>
                         <p className="mt-1 text-white/80">{item.company}</p>
-                        <p className="mt-1 text-sm text-white/55">
-                          {item.date}
-                        </p>
+                        <p className="mt-1 text-sm text-white/55">{item.date}</p>
                       </div>
                     ))}
                   </div>
@@ -430,14 +414,10 @@ export default function Home() {
 
                   <div className="mt-8 grid gap-8 md:grid-cols-2">
                     {education.map((item) => (
-                      <div key={item.degree}>
+                      <div key={item.degree} className="transition hover:translate-x-2">
                         <h4 className="font-bold text-white">{item.degree}</h4>
-                        <p className="mt-1 text-white/80">
-                          {item.institution}
-                        </p>
-                        <p className="mt-1 text-sm text-white/55">
-                          {item.date}
-                        </p>
+                        <p className="mt-1 text-white/80">{item.institution}</p>
+                        <p className="mt-1 text-sm text-white/55">{item.date}</p>
                       </div>
                     ))}
                   </div>
@@ -452,23 +432,21 @@ export default function Home() {
                     {memberships.map((membership) => (
                       <div
                         key={membership}
-                        className="rounded-2xl border border-white/10 bg-[#002C2F] p-5"
+                        className="rounded-2xl border border-white/10 bg-[#002C2F] p-5 transition hover:-translate-y-1 hover:border-[#B6D957]"
                       >
-                        <p className="font-semibold text-white">
-                          {membership}
-                        </p>
+                        <p className="font-semibold text-white">{membership}</p>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <Link
+                <MagneticLink
                   href="/projects"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#B6D957] px-6 py-3 text-sm font-semibold text-[#003C3F] transition hover:bg-[#CBEA6A]"
                 >
                   View Full Project Portfolio
                   <ArrowRight size={18} />
-                </Link>
+                </MagneticLink>
               </div>
             </Reveal>
           </div>
@@ -486,8 +464,7 @@ export default function Home() {
                 </p>
 
                 <h2 className="mt-4 font-[var(--font-space-grotesk)] text-4xl font-bold tracking-tight">
-                  Practical design decisions for safer and more accessible
-                  public spaces.
+                  Practical design decisions for safer and more accessible public spaces.
                 </h2>
               </div>
             </Reveal>
@@ -500,9 +477,8 @@ export default function Home() {
                   "Evidence-based decision making through modelling and analysis.",
                   "Accessible streets that improve everyday movement for communities.",
                 ].map((item) => (
-                  <div key={item} className="flex gap-4">
+                  <div key={item} className="flex gap-4 transition hover:translate-x-2">
                     <CheckCircle2 className="mt-1 text-[#7EA629]" size={22} />
-
                     <p className="text-lg leading-8 text-slate-700">{item}</p>
                   </div>
                 ))}
@@ -554,44 +530,19 @@ export default function Home() {
               encType="text/plain"
               className="space-y-6"
             >
-              <div className="grid gap-6 md:grid-cols-2">
-                <div>
-                  <label className="text-sm font-semibold">First Name</label>
-                  <input
-                    name="firstName"
-                    required
-                    className="mt-2 w-full border border-[#003C3F]/20 bg-white px-4 py-3 outline-none transition focus:border-[#7EA629]"
-                  />
-                </div>
-
-                <div>
-                  <label className="text-sm font-semibold">Last Name</label>
-                  <input
-                    name="lastName"
-                    required
-                    className="mt-2 w-full border border-[#003C3F]/20 bg-white px-4 py-3 outline-none transition focus:border-[#7EA629]"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="text-sm font-semibold">Email Address</label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="mt-2 w-full border border-[#003C3F]/20 bg-white px-4 py-3 outline-none transition focus:border-[#7EA629]"
-                />
-              </div>
-
-              <div>
-                <label className="text-sm font-semibold">Subject</label>
-                <input
-                  name="subject"
-                  required
-                  className="mt-2 w-full border border-[#003C3F]/20 bg-white px-4 py-3 outline-none transition focus:border-[#7EA629]"
-                />
-              </div>
+              {["First Name", "Last Name", "Email Address", "Subject"].map(
+                (label) => (
+                  <div key={label}>
+                    <label className="text-sm font-semibold">{label}</label>
+                    <input
+                      type={label === "Email Address" ? "email" : "text"}
+                      name={label.replaceAll(" ", "").toLowerCase()}
+                      required
+                      className="mt-2 w-full border border-[#003C3F]/20 bg-white px-4 py-3 outline-none transition focus:border-[#7EA629]"
+                    />
+                  </div>
+                )
+              )}
 
               <div>
                 <label className="text-sm font-semibold">Message</label>
