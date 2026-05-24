@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 import {
   ArrowLeft,
   BarChart3,
@@ -139,58 +140,59 @@ export default function ProjectsPage() {
           </Link>
         </nav>
 
-        <header className="py-20">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#B6D957]">
-            Project Portfolio
-          </p>
+        <Reveal>
+          <header className="py-20">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#B6D957]">
+              Project Portfolio
+            </p>
 
-          <h1 className="mt-5 max-w-4xl font-[var(--font-space-grotesk)] text-5xl font-bold tracking-tight text-white md:text-7xl">
-            Selected transport and civil engineering projects.
-          </h1>
+            <h1 className="mt-5 max-w-4xl font-[var(--font-space-grotesk)] text-5xl font-bold tracking-tight text-white md:text-7xl">
+              Selected transport and civil engineering projects.
+            </h1>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/80">
-            A selection of academic and professional engineering projects across
-            transport planning, railway infrastructure, GIS, highways, junction
-            design, water infrastructure and structural engineering.
-          </p>
-        </header>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-white/80">
+              A selection of academic and professional engineering projects
+              across transport planning, railway infrastructure, GIS, highways,
+              junction design, water infrastructure and structural engineering.
+            </p>
+          </header>
+        </Reveal>
 
         <section className="grid gap-6 md:grid-cols-2">
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             const Icon = project.icon;
 
             return (
-              <article
-                key={project.title}
-                className="rounded-3xl border border-white/10 bg-[#002C2F] p-8 shadow-xl transition hover:-translate-y-1 hover:border-[#B6D957]"
-              >
-                <div className="mb-6 inline-flex rounded-xl bg-[#B6D957] p-3 text-[#003C3F]">
-                  <Icon size={24} />
-                </div>
+              <Reveal key={project.title} delay={index * 0.06}>
+                <article className="group rounded-3xl border border-white/10 bg-[#002C2F] p-8 shadow-xl transition duration-300 hover:-translate-y-2 hover:border-[#B6D957] hover:bg-[#00282B]">
+                  <div className="mb-6 inline-flex rounded-xl bg-[#B6D957] p-3 text-[#003C3F] transition group-hover:scale-110">
+                    <Icon size={24} />
+                  </div>
 
-                <p className="text-sm font-semibold text-[#B6D957]">
-                  {project.type}
-                </p>
+                  <p className="text-sm font-semibold text-[#B6D957]">
+                    {project.type}
+                  </p>
 
-                <h2 className="mt-3 font-[var(--font-space-grotesk)] text-2xl font-bold text-white">
-                  {project.title}
-                </h2>
+                  <h2 className="mt-3 font-[var(--font-space-grotesk)] text-2xl font-bold text-white">
+                    {project.title}
+                  </h2>
 
-                <p className="mt-2 text-sm text-white/60">{project.date}</p>
+                  <p className="mt-2 text-sm text-white/60">{project.date}</p>
 
-                <p className="mt-5 leading-7 text-white/80">
-                  {project.description}
-                </p>
+                  <p className="mt-5 leading-7 text-white/80">
+                    {project.description}
+                  </p>
 
-                <ul className="mt-6 space-y-3 text-sm leading-6 text-white/75">
-                  {project.details.map((detail) => (
-                    <li key={detail} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B6D957]" />
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
+                  <ul className="mt-6 space-y-3 text-sm leading-6 text-white/75">
+                    {project.details.map((detail) => (
+                      <li key={detail} className="flex gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B6D957]" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
             );
           })}
         </section>
