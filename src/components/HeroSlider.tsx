@@ -4,34 +4,56 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 
+type HeroSliderProps = {
+  isTurkish: boolean;
+};
+
 const slides = [
   {
     image: "/images/huseyin-alsanpp.webp",
-    label: "Traffic Engineer",
-    title: "Huseyin Alsan",
-    description: "Roads · Streets · Active Travel · Traffic Modelling",
+    label: { en: "Traffic Engineer", tr: "Trafik Mühendisi" },
+    title: { en: "Huseyin Alsan", tr: "Huseyin Alsan" },
+    description: {
+      en: "Roads · Streets · Active Travel · Traffic Modelling",
+      tr: "Yollar · Sokaklar · Aktif Ulaşım · Trafik Modelleme",
+    },
   },
   {
     image: "/images/Manchester.webp",
-    label: "Selected Work",
-    title: "Manchester Road",
-    description: "Active travel and CYCLOPS design experience.",
+    label: { en: "Selected Work", tr: "Seçilmiş Proje" },
+    title: { en: "Manchester Road", tr: "Manchester Yolu" },
+    description: {
+      en: "Active travel and CYCLOPS design experience.",
+      tr: "Aktif ulaşım ve CYCLOPS kavşak tasarım deneyimi.",
+    },
   },
   {
     image: "/images/roundabout.webp",
-    label: "Highways Design",
-    title: "Junction & Roundabout Design",
-    description: "Design thinking around capacity, safety and accessibility.",
+    label: { en: "Highways Design", tr: "Karayolu Tasarımı" },
+    title: {
+      en: "Junction & Roundabout Design",
+      tr: "Kavşak ve Dönel Kavşak Tasarımı",
+    },
+    description: {
+      en: "Design thinking around capacity, safety and accessibility.",
+      tr: "Kapasite, güvenlik ve erişilebilirlik odaklı tasarım yaklaşımı.",
+    },
   },
   {
     image: "/images/Scooter.webp",
-    label: "Active Travel",
-    title: "Safer Urban Movement",
-    description: "Supporting walking, cycling and micromobility infrastructure.",
+    label: { en: "Active Travel", tr: "Aktif Ulaşım" },
+    title: {
+      en: "Safer Urban Movement",
+      tr: "Daha Güvenli Kentsel Hareketlilik",
+    },
+    description: {
+      en: "Supporting walking, cycling and micromobility infrastructure.",
+      tr: "Yürüme, bisiklet ve mikro mobilite altyapılarını destekleme.",
+    },
   },
 ];
 
-export default function HeroSlider() {
+export default function HeroSlider({ isTurkish }: HeroSliderProps) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -58,7 +80,7 @@ export default function HeroSlider() {
           >
             <Image
               src={slide.image}
-              alt={slide.title}
+              alt={isTurkish ? slide.title.tr : slide.title.en}
               fill
               priority={current === 0}
               quality={100}
@@ -72,22 +94,22 @@ export default function HeroSlider() {
         <div className="absolute bottom-0 left-0 right-0 p-8">
           <AnimatePresence mode="wait">
             <motion.div
-              key={slide.title}
+              key={isTurkish ? slide.title.tr : slide.title.en}
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.55, ease: "easeOut" }}
             >
               <p className="text-sm uppercase tracking-[0.25em] text-[#B6D957]">
-                {slide.label}
+                {isTurkish ? slide.label.tr : slide.label.en}
               </p>
 
               <h2 className="mt-3 font-[var(--font-space-grotesk)] text-4xl font-bold text-white">
-                {slide.title}
+                {isTurkish ? slide.title.tr : slide.title.en}
               </h2>
 
               <p className="mt-3 max-w-md text-sm leading-6 text-white/75">
-                {slide.description}
+                {isTurkish ? slide.description.tr : slide.description.en}
               </p>
             </motion.div>
           </AnimatePresence>

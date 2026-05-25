@@ -379,7 +379,7 @@ return (
           </section>
 
           <Reveal delay={0.2}>
-            <HeroSlider />
+            <HeroSlider isTurkish={isTurkish} />
           </Reveal>
         </div>
       </section>
