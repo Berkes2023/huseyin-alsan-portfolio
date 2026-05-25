@@ -1,125 +1,286 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import ProjectHoverCard from "@/components/ProjectHoverCard";
+
 import {
   ArrowLeft,
   BarChart3,
   Building2,
   CircleDot,
-  Droplets,
+  Globe2,
   Landmark,
   Map,
   Route,
-  Train,
 } from "lucide-react";
 
-const projects = [
+const projectsData = (isTurkish: boolean) => [
   {
-    title: "Strategic Overnight Train Network for Europe",
-    type: "Transport Planning",
-    date: "Jun 2023 – Oct 2023",
-    icon: Train,
-    description:
-      "Reviewed existing overnight rail provision and future proposals to explore how a coherent continent-wide European night train network could be developed.",
-    details: [
-      "Analysed current and latent demand for long-distance travel in Europe.",
-      "Considered environmental impacts and potential mode shift from aviation.",
-      "Explored criteria for prioritising future overnight rail routes.",
-    ],
-  },
-  {
-    title: "Railway Engineering and Operations Case Study Portfolio",
-    type: "Railway Infrastructure",
-    date: "Feb 2023 – May 2023",
+    title: isTurkish
+      ? "Hereford LUF – Tavsiye Niteliğinde 20MPH Hız Limiti"
+      : "Hereford LUF – Advisory 20MPH Limit",
+
+    type: isTurkish
+      ? "Trafik Düzenleme / Hız Yönetimi"
+      : "Traffic Regulation / Speed Management",
+
+    date: "Herefordshire Council",
+
     icon: Route,
-    description:
-      "Completed a multidisciplinary railway engineering case study for a proposed new railway line from Brackley to Banbury.",
+
+    description: isTurkish
+      ? "ATC hız ve hacim verileri, çarpışma analizleri ve OS haritaları kullanılarak tavsiye niteliğinde 20mph bölgelerinin geliştirilmesine destek sağlandı."
+      : "Supported advisory 20mph zone development using ATC speed and volume data, collision data and OS base mapping.",
+
     details: [
-      "Covered route planning, earthworks, structures and stations.",
-      "Considered signalling, capacity, timetabling and safety factors.",
-      "Explored regulation, governance, organisation and human factors.",
+      isTurkish
+        ? "Seçilen güzergahlarda trafik ve çarpışma verileri analiz edildi."
+        : "Collated traffic and collision data for selected routes.",
+
+      isTurkish
+        ? "Önerilen 20mph bölgeleri için AutoCAD çizimleri hazırlandı."
+        : "Prepared AutoCAD drawings for proposed advisory 20mph zones.",
+
+      isTurkish
+        ? "KeySIGN ve Traffic Signs Manual kullanılarak tabela tasarımları oluşturuldu."
+        : "Used KeySIGN and the Traffic Signs Manual to design advisory 20mph signage.",
     ],
   },
+
   {
-    title: "Transport Data Analysis",
-    type: "Data Analysis",
-    date: "Feb 2023 – May 2023",
+    title: isTurkish
+      ? "A48 Newport Seçenek Geliştirme"
+      : "A48 Newport Option Development",
+
+    type: isTurkish
+      ? "Trafik Modelleme / Veri Analizi"
+      : "Traffic Modelling / Data Analysis",
+
+    date: "Transport for Wales",
+
     icon: BarChart3,
-    description:
-      "Analysed bus dwell time and travel mode choice data using statistical analysis and transport modelling tools.",
+
+    description: isTurkish
+      ? "Vissim ve ulaşım anket verileri kullanılarak Newport ağının trafik modelleme çalışmalarına destek sağlandı."
+      : "Supported traffic modelling and option development for the Newport network using Vissim and transport survey data.",
+
     details: [
-      "Used IBM SPSS and Biogeme for analysis.",
-      "Developed regression models for bus dwell time.",
-      "Carried out exploratory data analysis and hypothesis testing.",
+      isTurkish
+        ? "Vissim ağ kodlama çalışmalarına katkı sağlandı."
+        : "Contributed to network coding in Vissim.",
+
+      isTurkish
+        ? "MCTC, ANPR ve ATC veri setleri analiz edildi."
+        : "Analysed MCTC, ANPR and ATC survey datasets.",
+
+      isTurkish
+        ? "Mevcut Durum Raporu için ulaşım altyapı analizleri desteklendi."
+        : "Supported the Existing Conditions Report using transport infrastructure evidence.",
     ],
   },
+
   {
-    title: "GIS & Transport Modelling",
-    type: "GIS / Transport Analysis",
-    date: "Nov 2022 – Jan 2023",
-    icon: Map,
-    description:
-      "Used ArcGIS to analyse commuting patterns, station catchments, accessibility, route planning and travel times.",
+    title: isTurkish
+      ? "Scholar’s Way Tasarım ve İş Geliştirme Çalışması"
+      : "Scholar’s Way Design and Business Case",
+
+    type: isTurkish
+      ? "Aktif Ulaşım / İş Geliştirme"
+      : "Active Travel / Business Case",
+
+    date: "Bath & North East Somerset Council",
+
+    icon: Route,
+
+    description: isTurkish
+      ? "Bath bölgesinde güvenli aktif ulaşım bağlantıları geliştirmek amacıyla mühendislik tasarım çalışmalarına destek sağlandı."
+      : "Supported active travel engineering interventions for safe and high-quality links in South East Bath.",
+
     details: [
-      "Produced thematic transport maps for Blackburn with Darwen.",
-      "Generated station catchments using road-network analysis.",
-      "Assessed accessibility to nearby services by walking, cycling and car.",
+      isTurkish
+        ? "Konsept ve seçenek tasarımlarına katkı sağlandı."
+        : "Assisted with concept and optioneering design.",
+
+      isTurkish
+        ? "LTN 1/20, Inclusive Mobility ve Manual for Streets standartları uygulandı."
+        : "Applied guidance including Inclusive Mobility, Manual for Streets and LTN 1/20.",
+
+      isTurkish
+        ? "Aktif ulaşım bağlantıları ve ulaşım dönüşüm projeleri desteklendi."
+        : "Supported design work for active travel links and modal shift.",
     ],
   },
+
   {
-    title: "Junction Design",
-    type: "Highways / Junction Modelling",
-    date: "Oct 2022 – Dec 2022",
+    title: isTurkish
+      ? "Etkinlik Günü Park ve Acil Durum Güzergahları"
+      : "Event Day Parking & Emergency Route Schemes",
+
+    type: isTurkish
+      ? "Trafik Düzenleme Emirleri"
+      : "Traffic Regulation Orders",
+
+    date: "Glasgow City Council",
+
     icon: CircleDot,
-    description:
-      "Analysed a junction north of Southampton and proposed roundabout design options based on safety, capacity and environmental impact.",
+
+    description: isTurkish
+      ? "Celtic Park ve Ibrox Stadyumu çevresindeki etkinlik günü park ve acil durum güzergahları geliştirildi."
+      : "Developed Event Day Parking and Emergency Route schemes around Celtic Park and Ibrox Stadiums.",
+
     details: [
-      "Used AutoCAD and ARCADY 9.",
-      "Followed UK roundabout design standards including CD116.",
-      "Compared design options using capacity, fairness and safety criteria.",
+      isTurkish
+        ? "Detaylı TRO tasarım çizimleri hazırlandı."
+        : "Prepared detailed TRO design layouts.",
+
+      isTurkish
+        ? "Park kısıtlamaları ve acil durum erişim tasarımları geliştirildi."
+        : "Designed parking restrictions, emergency routes and access controls.",
+
+      isTurkish
+        ? "Paydaş geri bildirimleri doğrultusunda revizyonlar yapıldı."
+        : "Supported stakeholder-led revisions and regulatory compliance.",
     ],
   },
+
   {
-    title: "Pipeline Feasibility Study",
-    type: "Water Infrastructure",
-    date: "Nov 2021 – Dec 2021",
-    icon: Droplets,
-    description:
-      "Designed pipeline options to supply drinking water to 2000 houses in Poundbury.",
+    title: isTurkish
+      ? "Manchester Road Aktif Ulaşım ve CYCLOPS Kavşak Tasarımı"
+      : "Manchester Road Active Travel and CYCLOPS Junction Design",
+
+    type: isTurkish
+      ? "CYCLOPS / Aktif Ulaşım Tasarımı"
+      : "CYCLOPS / Active Travel Design",
+
+    date: "Transport for Greater Manchester",
+
+    icon: CircleDot,
+
+    description: isTurkish
+      ? "Bolton’daki öncelikli kavşaklar için CYCLOPS kavşak tasarımları geliştirildi."
+      : "Developed CYCLOPS junction designs for eight priority junctions along Manchester Road in Bolton.",
+
     details: [
-      "Compared route, pipe diameter and pipe material options.",
-      "Considered pumped trunk main and gravity distribution main alternatives.",
-      "Focused on cost-effective infrastructure solutions.",
+      isTurkish
+        ? "Tek yönlü ve çift yönlü bisiklet altyapı seçenekleri tasarlandı."
+        : "Designed single-directional and bi-directional cycle movement options.",
+
+      isTurkish
+        ? "LinSig kullanılarak tasarımlar analiz edildi."
+        : "Used LinSig to test and assess design configurations.",
+
+      isTurkish
+        ? "Sinyalizasyon, yol işaretleri ve geometrik tasarımlar entegre edildi."
+        : "Integrated junction geometry, crossings, signal staging, markings and signage.",
     ],
   },
+
   {
-    title: "Student Hub Design",
-    type: "Building Design",
-    date: "Oct 2021 – Dec 2021",
+    title: isTurkish
+      ? "İrlanda Mobilite Merkezleri"
+      : "NTA Ireland Mobility Hubs",
+
+    type: isTurkish
+      ? "Mobilite Merkezleri"
+      : "Mobility Hubs",
+
+    date: "National Transport Authority",
+
     icon: Building2,
-    description:
-      "Designed a student hub learning lab using structural brickwork, timber and glass materials.",
+
+    description: isTurkish
+      ? "İrlanda genelinde sürdürülebilir ulaşımı destekleyen mobilite merkezleri tasarlandı."
+      : "Designed mobility hubs across Ireland supporting sustainable transport infrastructure.",
+
     details: [
-      "Developed a concept for a creative and collaborative learning space.",
-      "Used Revit and engineering design principles.",
-      "Considered structural materials and architectural functionality.",
+      isTurkish
+        ? "Bisiklet parkları, EV şarj noktaları ve scooter alanları tasarlandı."
+        : "Integrated cycle stands, EV charging and scooter facilities.",
+
+      isTurkish
+        ? "NTA standartlarına uygun yol işaretleri ve çizgiler uygulandı."
+        : "Applied NTA compliant signage and road markings.",
+
+      isTurkish
+        ? "Çoklu ulaşım modlarını destekleyen merkez çözümleri geliştirildi."
+        : "Developed multimodal transport hub solutions.",
     ],
   },
+
   {
-    title: "5 Storey Hotel Design",
-    type: "Structural Engineering",
-    date: "Feb 2021 – May 2021",
-    icon: Landmark,
-    description:
-      "Designed a five-storey hotel building using both steel and reinforced concrete solutions.",
+    title: isTurkish
+      ? "Cardiff Şehir Merkezi Güney Modelleme"
+      : "Cardiff City Centre South Modelling",
+
+    type: isTurkish
+      ? "Sinyal Modelleme"
+      : "Signal Modelling",
+
+    date: "Cardiff City Council",
+
+    icon: Map,
+
+    description: isTurkish
+      ? "LinSig kullanılarak trafik sinyal modelleme ve performans analizleri desteklendi."
+      : "Supported traffic signal modelling and performance analysis using LinSig.",
+
     details: [
-      "Designed slabs, beams, columns, connections and foundations.",
-      "Worked with Eurocode 2 and Eurocode 3 principles.",
-      "Compared steel and reinforced concrete structural solutions.",
+      isTurkish
+        ? "Sinyal fazları ve döngü süreleri analiz edildi."
+        : "Analysed signal phase and cycle timings.",
+
+      isTurkish
+        ? "Gecikme ve kuyruk performans değerlendirmeleri yapıldı."
+        : "Supported queue and delay performance reviews.",
+
+      isTurkish
+        ? "ATC ve MCC veri analizleri gerçekleştirildi."
+        : "Worked with ATC and MCC traffic datasets.",
+    ],
+  },
+
+  {
+    title: isTurkish
+      ? "Öğrenci Sokakları Projeleri"
+      : "School Streets Projects",
+
+    type: isTurkish
+      ? "TRO / Yol İşaretleme"
+      : "TRO / Road Markings",
+
+    date: "Cardiff City Council",
+
+    icon: Landmark,
+
+    description: isTurkish
+      ? "Cardiff genelinde 20’den fazla alan için TRO ve yol işaretleme tasarımları geliştirildi."
+      : "Delivered TRO and road marking schemes across more than 20 Cardiff locations.",
+
+    details: [
+      isTurkish
+        ? "Okul sokakları ve yerleşim bölgeleri için tasarımlar geliştirildi."
+        : "Developed layouts for school streets and residential areas.",
+
+      isTurkish
+        ? "Bisiklet ve yaya altyapıları entegre edildi."
+        : "Integrated pedestrian and cycle facilities.",
+
+      isTurkish
+        ? "Yerel yönetim ve paydaş geri bildirimleri uygulandı."
+        : "Implemented local authority and stakeholder revisions.",
     ],
   },
 ];
 
 export default function ProjectsPage() {
+  const [language, setLanguage] = useState<"en" | "tr">("en");
+
+  const isTurkish = language === "tr";
+
+  const projects = projectsData(isTurkish);
+
   return (
     <main className="min-h-screen bg-[#003C3F] text-white">
       <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
@@ -136,67 +297,54 @@ export default function ProjectsPage() {
             className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-4 py-2 text-sm text-white/80 transition hover:bg-white hover:text-[#003C3F]"
           >
             <ArrowLeft size={16} />
-            Back Home
+
+            {isTurkish ? "Ana Sayfa" : "Back Home"}
           </Link>
         </nav>
 
         <Reveal>
           <header className="py-20">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#B6D957]">
-              Project Portfolio
+              {isTurkish ? "Proje Portföyü" : "Project Portfolio"}
             </p>
 
             <h1 className="mt-5 max-w-4xl font-[var(--font-space-grotesk)] text-5xl font-bold tracking-tight text-white md:text-7xl">
-              Selected transport and civil engineering projects.
+              {isTurkish
+                ? "Seçilmiş ulaşım ve inşaat mühendisliği projeleri."
+                : "Selected transport and civil engineering projects."}
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-white/80">
-              A selection of academic and professional engineering projects
-              across transport planning, railway infrastructure, GIS, highways,
-              junction design, water infrastructure and structural engineering.
+              {isTurkish
+                ? "Ulaşım planlama, trafik mühendisliği, aktif ulaşım, TRO tasarımı, modelleme ve altyapı geliştirme alanlarındaki seçilmiş mühendislik projeleri."
+                : "Selected engineering projects across transport planning, traffic engineering, active travel, modelling and infrastructure development."}
             </p>
           </header>
         </Reveal>
 
-        <section className="grid gap-6 md:grid-cols-2">
-          {projects.map((project, index) => {
-            const Icon = project.icon;
+ <section className="grid gap-6 md:grid-cols-2">
+  {projects.map((project, index) => (
+    <Reveal key={project.title} delay={index * 0.06}>
+      <ProjectHoverCard
+        title={project.title}
+        type={project.type}
+        date={project.date}
+        description={project.description}
+        details={project.details}
+        icon={project.icon}
+      />
+    </Reveal>
+  ))}
+</section>
+</section>
 
-            return (
-              <Reveal key={project.title} delay={index * 0.06}>
-                <article className="group rounded-3xl border border-white/10 bg-[#002C2F] p-8 shadow-xl transition duration-300 hover:-translate-y-2 hover:border-[#B6D957] hover:bg-[#00282B]">
-                  <div className="mb-6 inline-flex rounded-xl bg-[#B6D957] p-3 text-[#003C3F] transition group-hover:scale-110">
-                    <Icon size={24} />
-                  </div>
-
-                  <p className="text-sm font-semibold text-[#B6D957]">
-                    {project.type}
-                  </p>
-
-                  <h2 className="mt-3 font-[var(--font-space-grotesk)] text-2xl font-bold text-white">
-                    {project.title}
-                  </h2>
-
-                  <p className="mt-2 text-sm text-white/60">{project.date}</p>
-
-                  <p className="mt-5 leading-7 text-white/80">
-                    {project.description}
-                  </p>
-
-                  <ul className="mt-6 space-y-3 text-sm leading-6 text-white/75">
-                    {project.details.map((detail) => (
-                      <li key={detail} className="flex gap-3">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B6D957]" />
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              </Reveal>
-            );
-          })}
-        </section>
-      </section>
+      <button
+        onClick={() => setLanguage(isTurkish ? "en" : "tr")}
+        className="fixed bottom-6 right-6 z-[999] inline-flex items-center gap-3 rounded-full border border-white/15 bg-[#002C2F]/90 px-5 py-3 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-2xl backdrop-blur-xl transition hover:border-[#B6D957] hover:text-[#B6D957]"
+      >
+        <Globe2 size={18} />
+        {isTurkish ? "EN" : "TR"}
+      </button>
     </main>
   );
 }
