@@ -403,7 +403,7 @@ return (
           <div className="space-y-8">
             <div className="relative overflow-hidden rounded-2xl border border-[#003C3F]/10 bg-[#F4F7EF] shadow-lg">
               <Image
-                src="/images/huseyin-alsan.webp"
+                src="/images/huseyin-alsanpp.webp"
                 alt="Huseyin Alsan, Traffic Engineer"
                 width={900}
                 height={700}
