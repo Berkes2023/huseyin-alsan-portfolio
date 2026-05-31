@@ -20,6 +20,7 @@
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
@@ -51,6 +52,17 @@ body {
 
 .reveal-delay-250 {
   transition-delay: 0.25s;
+}
+
+#lenis-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#lenis-content {
+  width: 100%;
+  min-height: 100vh;
 }
 
 /* hero sticky tweaks */

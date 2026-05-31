@@ -12,6 +12,8 @@ export default function SmoothScrollProvider({
     const lenis = new Lenis({
       lerp: 0.08,
       smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 1.5,
     });
 
     function raf(time: number) {
@@ -19,9 +21,10 @@ export default function SmoothScrollProvider({
       requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    const rafId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
   }, []);
