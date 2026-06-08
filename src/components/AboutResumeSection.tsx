@@ -17,30 +17,49 @@ export default function AboutResumeSection({
     isTurkish ? "KTMMOB / UCCTEA Üyesi" : "KTMMOB / UCCTEA Member",
   ];
 
-  const resumeExperience = [
-    {
-      role: isTurkish ? "Mühendis" : "Engineer",
-      company: "AECOM",
-      date: isTurkish ? "Eki 2023 – Günümüz" : "Oct 2023 – Present",
-    },
-    {
-      role: isTurkish ? "Mühendislik Stajyeri" : "Engineering Intern",
-      company: "Tasyapi Insaat",
-      date: isTurkish ? "Tem 2021 – Ağu 2021" : "Jul 2021 – Aug 2021",
-    },
-    {
-      role: isTurkish ? "Mühendislik Stajyeri" : "Engineering Intern",
-      company: isTurkish
-        ? "Ulaştırma ve Altyapı Bakanlığı Planlama ve İnşaat Dairesi"
-        : "Planning and Construction Department, Ministry of Transport and Infrastructure",
-      date: isTurkish ? "Haz 2020 – Tem 2020" : "Jun 2020 – Jul 2020",
-    },
-    {
-      role: isTurkish ? "Çırak / Yardımcı Çalışan" : "Apprentice / Assistant Worker",
-      company: "Asik Trading",
-      date: isTurkish ? "Haz 2017 – Ağu 2017" : "Jun 2017 – Aug 2017",
-    },
-  ];
+const resumeExperience = [
+  {
+    role: isTurkish
+      ? "Trafik Mühendisi"
+      : "Traffic Engineer",
+    company: "AECOM",
+    date: isTurkish
+      ? "Eki 2023 – Günümüz"
+      : "Oct 2023 – Present",
+  },
+
+  {
+    role: isTurkish
+      ? "Mühendislik Stajyeri"
+      : "Engineering Intern",
+    company: "Tasyapi Insaat",
+    date: isTurkish
+      ? "Tem 2021 – Ağu 2021"
+      : "Jul 2021 – Aug 2021",
+  },
+
+  {
+    role: isTurkish
+      ? "Mühendislik Stajyeri"
+      : "Engineering Intern",
+    company: isTurkish
+      ? "Ulaştırma ve Altyapı Bakanlığı Planlama ve İnşaat Dairesi"
+      : "Planning and Construction Department, Ministry of Transport and Infrastructure",
+    date: isTurkish
+      ? "Haz 2020 – Tem 2020"
+      : "Jun 2020 – Jul 2020",
+  },
+
+  {
+    role: isTurkish
+      ? "Çırak / Yardımcı Çalışan"
+      : "Apprentice / Assistant Worker",
+    company: "Asik Trading",
+    date: isTurkish
+      ? "Haz 2017 – Ağu 2017"
+      : "Jun 2017 – Aug 2017",
+  },
+];
 
   return (
     <>
@@ -151,11 +170,11 @@ export default function AboutResumeSection({
                     : "Experience, education and professional focus."}
                 </h2>
 
-                <p className="mt-6 text-lg leading-8 text-white/80">
-                  {isTurkish
-                    ? "Yol tasarımı, sokak düzenlemeleri, aktif ulaşım, trafik modelleme, Trafik Düzenleme Emirleri (TRO) ve altyapı planlamasıyla şekillenen ulaşım ve inşaat mühendisliği geçmişi."
-                    : "A transport and civil engineering background shaped by roads, street design, active travel, traffic modelling, Traffic Regulation Orders and infrastructure planning."}
-                </p>
+              <p className="mt-6 text-lg leading-8 text-white/80">
+                {isTurkish
+                  ? "Çalışmalarım; yayaları, bisiklet kullanıcılarını, toplu taşıma kullanıcılarını ve araç hareketliliğini destekleyen, kısıtlı kentsel sokak ortamlarında uygulanabilir mühendislik çözümleri geliştirmeye odaklanmaktadır."
+                  : "My work focuses on delivering practical engineering solutions that support pedestrians, cyclists, public transport and vehicular movement within constrained urban street environments."}
+              </p>
               </div>
             </Reveal>
 

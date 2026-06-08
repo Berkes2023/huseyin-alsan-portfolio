@@ -13,91 +13,73 @@ export default function SkillsSection({
 }: SkillsSectionProps) {
   const linkedinUrl = "https://www.linkedin.com/in/huseyinalsan/";
 
-  const skills = [
-    "AutoCAD",
-    "Civil 3D",
-    "PTV Vissim",
-    "LinSig",
-    "ArcGIS",
-    "ARCADY",
-    "ProjectWise",
-    "PCMova",
-    "Microsoft Office",
-    "Autodesk Construction Cloud (ACC)",
-    "KeySIGN & KeyLINES",
+const skills = [
+  "AutoCAD",
+  "Civil 3D",
+  "PTV Vissim",
+  "LinSig",
+  "Microsoft Office",
+  "Autodesk Construction Cloud (ACC)",
+  "KeySIGN & KeyLINES",
+  "ProjectWise",
+  "PCMova",
 
-    isTurkish
-      ? "Ulaşım Modellemesi ve Analizi"
-      : "Transport Modelling & Analysis",
+  isTurkish
+    ? "Ulaşım Modellemesi ve Analizi"
+    : "Transport Modelling & Analysis",
 
-    isTurkish
-      ? "Trafik Simülasyonu"
-      : "Traffic Simulation",
+  isTurkish
+    ? "Karayolu ve Aktif Ulaşım Tasarımı"
+    : "Highway & Active Travel Design",
 
-    isTurkish
-      ? "Trafik Mikrosimülasyonu"
-      : "Traffic Microsimulation",
+  isTurkish
+    ? "Problem Çözme Yeteneği"
+    : "Problem-Solving Ability",
 
-    isTurkish
-      ? "Trafik Sinyalizasyonu"
-      : "Traffic Signalling",
+  isTurkish
+    ? "Yol ve Sokak Tasarımı"
+    : "Road & Street Design",
 
-    isTurkish
-      ? "Trafik Düzenleme Emirleri"
-      : "Traffic Regulation Orders",
+  isTurkish
+    ? "Trafik Düzenleme Emirleri"
+    : "Traffic Regulation Orders",
 
-    isTurkish
-      ? "Yol ve Sokak Tasarımı"
-      : "Road & Street Design",
+  isTurkish
+    ? "Aktif Ulaşım Tasarımı"
+    : "Active Travel Design",
 
-    isTurkish
-      ? "Karayolu Tasarımı"
-      : "Highway Design",
+  isTurkish
+    ? "Trafik Simülasyonu"
+    : "Traffic Simulation",
 
-    isTurkish
-      ? "Aktif Ulaşım Tasarımı"
-      : "Active Travel Design",
+  isTurkish
+    ? "Takım Çalışması ve Liderlik"
+    : "Teamwork & Leadership",
 
-    isTurkish
-      ? "Bisiklet Yolu Tasarımı"
-      : "Cycle Lane Design",
+  isTurkish
+    ? "Zaman Yönetimi"
+    : "Time Management",
 
-    isTurkish
-      ? "Otobüs Altyapı Tasarımı"
-      : "Bus Infrastructure Design",
+  isTurkish
+    ? "Uyumluluk ve Standart Bilgisi"
+    : "Compliance & Standards Knowledge",
 
-    isTurkish
-      ? "Teknik Dokümantasyon ve Raporlama"
-      : "Technical Documentation & Reporting",
+  isTurkish
+    ? "Uyum Yeteneği"
+    : "Adaptability",
 
-    isTurkish
-      ? "Uyumluluk ve Standart Bilgisi"
-      : "Compliance & Standards Knowledge",
+  isTurkish
+    ? "Güvenlik Farkındalığı"
+    : "Safety Awareness",
 
-    isTurkish
-      ? "Güvenlik Farkındalığı"
-      : "Safety Awareness",
+  isTurkish
+    ? "Teknik Dokümantasyon ve Raporlama"
+    : "Technical Documentation & Reporting",
 
-    isTurkish
-      ? "Problem Çözme"
-      : "Problem Solving",
-
-    isTurkish
-      ? "İletişim"
-      : "Communication",
-
-    isTurkish
-      ? "Takım Çalışması ve Liderlik"
-      : "Teamwork & Leadership",
-
-    isTurkish
-      ? "Zaman Yönetimi"
-      : "Time Management",
-
-    isTurkish
-      ? "Uyum Yeteneği"
-      : "Adaptability",
-  ];
+  isTurkish
+    ? "İletişim"
+    : "Communication",
+];
 
   return (
     <section

@@ -11,12 +11,19 @@ type ContactSectionProps = {
 const linkedinUrl = "https://www.linkedin.com/in/huseyinalsan/";
 const emailAddress = "huseyin.alsan@outlook.com";
 
-export default function ContactSection({ isTurkish }: ContactSectionProps) {
+export default function ContactSection({
+  isTurkish,
+}: ContactSectionProps) {
   return (
     <>
       {/* Contact */}
-      <section id="contact" className="bg-[#003C3F] px-6 py-24 text-white">
+      <section
+        id="contact"
+        className="bg-[#003C3F] px-6 py-24 text-white"
+      >
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          
+          {/* Left */}
           <Reveal>
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#B6D957]">
@@ -51,6 +58,8 @@ export default function ContactSection({ isTurkish }: ContactSectionProps) {
             </div>
           </Reveal>
 
+
+          {/* Form */}
           <Reveal delay={0.12}>
             <form
               action={`mailto:${emailAddress}`}
@@ -58,23 +67,51 @@ export default function ContactSection({ isTurkish }: ContactSectionProps) {
               encType="text/plain"
               className="space-y-6"
             >
-              <div>
-                <label className="flex items-center gap-2 text-sm font-semibold text-white">
-                  {isTurkish ? "Ad Soyad" : "Full Name"}
 
-                  <span className="rounded-full border border-[#B6D957]/40 bg-[#B6D957]/10 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#B6D957]">
-                    {isTurkish ? "Zorunlu" : "Required"}
-                  </span>
-                </label>
+              {/* First + Last Name */}
+              <div className="grid gap-6 md:grid-cols-2">
 
-                <input
-                  type="text"
-                  name="fullname"
-                  required
-                  className="mt-2 w-full rounded-xl border border-white/15 bg-[#002C2F] px-4 py-3 text-white outline-none transition duration-300 focus:border-[#B6D957] focus:ring-2 focus:ring-[#B6D957]/20"
-                />
+                {/* First Name */}
+                <div>
+                  <label className="flex items-center gap-2 text-sm font-semibold text-white">
+                    {isTurkish ? "Ad" : "First Name"}
+
+                    <span className="rounded-full border border-[#B6D957]/40 bg-[#B6D957]/10 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#B6D957]">
+                      {isTurkish ? "Zorunlu" : "Required"}
+                    </span>
+                  </label>
+
+                  <input
+                    type="text"
+                    name="firstname"
+                    required
+                    className="mt-2 w-full rounded-xl border border-white/15 bg-[#002C2F] px-4 py-3 text-white outline-none transition duration-300 focus:border-[#B6D957] focus:ring-2 focus:ring-[#B6D957]/20"
+                  />
+                </div>
+
+
+                {/* Last Name */}
+                <div>
+                  <label className="flex items-center gap-2 text-sm font-semibold text-white">
+                    {isTurkish ? "Soyad" : "Last Name"}
+
+                    <span className="rounded-full border border-[#B6D957]/40 bg-[#B6D957]/10 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#B6D957]">
+                      {isTurkish ? "Zorunlu" : "Required"}
+                    </span>
+                  </label>
+
+                  <input
+                    type="text"
+                    name="lastname"
+                    required
+                    className="mt-2 w-full rounded-xl border border-white/15 bg-[#002C2F] px-4 py-3 text-white outline-none transition duration-300 focus:border-[#B6D957] focus:ring-2 focus:ring-[#B6D957]/20"
+                  />
+                </div>
+
               </div>
 
+
+              {/* Email */}
               <div>
                 <label className="flex items-center gap-2 text-sm font-semibold text-white">
                   {isTurkish ? "E-posta Adresi" : "Email Address"}
@@ -92,6 +129,8 @@ export default function ContactSection({ isTurkish }: ContactSectionProps) {
                 />
               </div>
 
+
+              {/* Subject */}
               <div>
                 <label className="flex items-center gap-2 text-sm font-semibold text-white">
                   {isTurkish ? "Konu" : "Subject"}
@@ -109,6 +148,8 @@ export default function ContactSection({ isTurkish }: ContactSectionProps) {
                 />
               </div>
 
+
+              {/* Message */}
               <div>
                 <label className="flex items-center gap-2 text-sm font-semibold text-white">
                   {isTurkish ? "Mesaj" : "Message"}
@@ -126,6 +167,8 @@ export default function ContactSection({ isTurkish }: ContactSectionProps) {
                 />
               </div>
 
+
+              {/* Submit */}
               <button
                 type="submit"
                 className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#B6D957] px-12 py-4 text-sm font-bold uppercase tracking-[0.25em] text-[#003C3F] transition duration-300 hover:bg-[#CBEA6A]"
@@ -133,11 +176,14 @@ export default function ContactSection({ isTurkish }: ContactSectionProps) {
                 {isTurkish ? "Gönder" : "Submit"}
                 <ArrowRight size={18} />
               </button>
+
             </form>
           </Reveal>
         </div>
       </section>
 
+
+      {/* Footer */}
       <footer className="border-t border-white/10 bg-[#003C3F] px-6 py-12 text-center text-white">
         <a
           href={`mailto:${emailAddress}`}
@@ -151,7 +197,9 @@ export default function ContactSection({ isTurkish }: ContactSectionProps) {
             LinkedIn
           </a>
 
-          <Link href="/projects">{isTurkish ? "Projeler" : "Projects"}</Link>
+          <Link href="/projects">
+            {isTurkish ? "Projeler" : "Projects"}
+          </Link>
         </div>
 
         <p className="mt-8 text-sm text-white/55">

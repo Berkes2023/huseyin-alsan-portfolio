@@ -26,17 +26,13 @@ export default function ImageSlider({ isTurkish }: Props) {
   return (
     <section className="bg-[#F4F7EF] px-6 py-24 text-[#003C3F]">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-12 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#7EA629]">
-            {isTurkish ? "Proje Galerisi" : "Project Gallery"}
-          </p>
-
-          <h2 className="mt-4 font-[var(--font-space-grotesk)] text-4xl font-bold tracking-tight md:text-5xl">
-            {isTurkish
-              ? "Seçilmiş proje görselleri"
-              : "Selected Project Visuals"}
-          </h2>
-        </div>
+      <div className="mb-12 text-center">
+        <h2 className="font-[var(--font-space-grotesk)] text-4xl font-bold tracking-tight md:text-5xl">
+          {isTurkish
+            ? "Web Sitesi Galerisi"
+            : "Website Gallery"}
+        </h2>
+      </div>
 
         <div className="relative mx-auto flex max-w-5xl items-center justify-center">
           <button

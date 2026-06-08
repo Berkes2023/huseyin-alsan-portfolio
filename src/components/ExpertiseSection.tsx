@@ -7,6 +7,9 @@ import {
   Car,
   Map,
   Route,
+  TrafficCone,
+  TrainFront,
+  ClipboardCheck,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
@@ -19,9 +22,7 @@ export default function ExpertiseSection({
 }: ExpertiseSectionProps) {
   const services = [
     {
-      title: isTurkish
-        ? "Aktif Ulaşım Tasarımı"
-        : "Active Travel Design",
+      title: isTurkish ? "Aktif Ulaşım Tasarımı" : "Active Travel Design",
       description: isTurkish
         ? "Bisiklet yolları, yaya altyapıları, CYCLOPS kavşakları ve sürdürülebilir ulaşım koridorlarının tasarımı."
         : "Design of cycle infrastructure, pedestrian facilities, CYCLOPS junctions and sustainable transport corridors.",
@@ -58,13 +59,32 @@ export default function ExpertiseSection({
       icon: Building2,
     },
     {
-      title: isTurkish
-        ? "Karayolu ve Altyapı Tasarımı"
-        : "Highway & Infrastructure Design",
+      title: isTurkish ? "Yol ve Sokak Tasarımı" : "Road & Street Design",
       description: isTurkish
-        ? "Yol düzenleri, geçici erişim yolları, kavşak tasarımı ve büyük altyapı projeleri."
-        : "Road layouts, temporary access routes, junction design and major infrastructure projects.",
+        ? "Yol düzenleri, sokak tasarımları, kavşak geometrileri ve kamusal alan iyileştirmeleri için uygulanabilir tasarım çözümleri."
+        : "Practical design solutions for road layouts, streetscapes, junction geometry and public realm improvements.",
       icon: Route,
+    },
+    {
+      title: isTurkish ? "Trafik Sinyalizasyonu" : "Traffic Signalling",
+      description: isTurkish
+        ? "Sinyal zamanlamaları, kavşak performansı ve yaya/araç hareketlerini destekleyen sinyalizasyon analizleri."
+        : "Signal analysis supporting junction performance, signal timings and pedestrian and vehicle movement.",
+      icon: TrafficCone,
+    },
+    {
+      title: isTurkish ? "Toplu Taşıma Planlaması" : "Public Transport Planning",
+      description: isTurkish
+        ? "Otobüs öncelik sistemleri, toplu taşıma erişilebilirliği ve sürdürülebilir ulaşım entegrasyonuna yönelik tasarım desteği."
+        : "Design support for bus priority, public transport accessibility and sustainable transport integration.",
+      icon: TrainFront,
+    },
+    {
+      title: isTurkish ? "Standartlar ve Uygunluk" : "Standards & Compliance",
+      description: isTurkish
+        ? "LTN 1/20, TSRGD, Traffic Signs Manual ve yerel otorite standartlarına uygun teknik tasarım çıktıları."
+        : "Technical design outputs aligned with LTN 1/20, TSRGD, Traffic Signs Manual and local authority standards.",
+      icon: ClipboardCheck,
     },
   ];
 
@@ -89,7 +109,7 @@ export default function ExpertiseSection({
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
             {isTurkish
-              ? "Çalışmalarım; yayaları, bisiklet kullanıcılarını, toplu taşıma yolcularını ve araçları destekleyen pratik mühendislik çözümlerine odaklanmaktadır. Bu çözümler çoğu zaman kısıtlı kentsel sokak ortamlarında uygulanmaktadır."
+              ? "Çalışmalarım; yayaları, bisiklet kullanıcılarını, toplu taşıma kullanıcılarını ve araçları destekleyen pratik mühendislik çözümlerine odaklanmaktadır."
               : "My work focuses on practical engineering solutions that support pedestrians, cyclists, public transport users and vehicles within often constrained urban street environments."}
           </p>
         </Reveal>
