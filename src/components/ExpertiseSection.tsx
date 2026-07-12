@@ -7,9 +7,6 @@ import {
   Car,
   Map,
   Route,
-  TrafficCone,
-  TrainFront,
-  ClipboardCheck,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
@@ -65,27 +62,7 @@ export default function ExpertiseSection({
         : "Practical design solutions for road layouts, streetscapes, junction geometry and public realm improvements.",
       icon: Route,
     },
-    {
-      title: isTurkish ? "Trafik Sinyalizasyonu" : "Traffic Signalling",
-      description: isTurkish
-        ? "Sinyal zamanlamaları, kavşak performansı ve yaya/araç hareketlerini destekleyen sinyalizasyon analizleri."
-        : "Signal analysis supporting junction performance, signal timings and pedestrian and vehicle movement.",
-      icon: TrafficCone,
-    },
-    {
-      title: isTurkish ? "Toplu Taşıma Planlaması" : "Public Transport Planning",
-      description: isTurkish
-        ? "Otobüs öncelik sistemleri, toplu taşıma erişilebilirliği ve sürdürülebilir ulaşım entegrasyonuna yönelik tasarım desteği."
-        : "Design support for bus priority, public transport accessibility and sustainable transport integration.",
-      icon: TrainFront,
-    },
-    {
-      title: isTurkish ? "Standartlar ve Uygunluk" : "Standards & Compliance",
-      description: isTurkish
-        ? "LTN 1/20, TSRGD, Traffic Signs Manual ve yerel otorite standartlarına uygun teknik tasarım çıktıları."
-        : "Technical design outputs aligned with LTN 1/20, TSRGD, Traffic Signs Manual and local authority standards.",
-      icon: ClipboardCheck,
-    },
+
   ];
 
   return (

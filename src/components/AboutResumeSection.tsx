@@ -76,7 +76,7 @@ const resumeExperience = [
             <Reveal delay={0.1}>
               <div className="relative overflow-hidden rounded-[2rem] border border-[#003C3F]/10 bg-[#F4F7EF] shadow-2xl">
                 <Image
-                  src="/images/huseyin-alsanpp.webp"
+                  src="/images/AboutHuseyin.webp"
                   alt="Huseyin Alsan, Traffic Engineer"
                   width={900}
                   height={1000}
@@ -90,16 +90,11 @@ const resumeExperience = [
               <div>
                 <h2 className="font-[var(--font-space-grotesk)] text-4xl font-bold leading-tight tracking-tight text-[#003C3F] md:text-5xl">
                   {isTurkish
-                    ? "Her gün sokaklarımızı kullanan topluluklar için daha güvenli, daha akıllı ve daha erişilebilir ulaşım altyapıları tasarlamaya odaklanıyorum."
-                    : "I am focused on designing safer, smarter and more accessible transport infrastructure for the communities who use our streets every day."}
+                      ? "Ulaşım sistemleri ve kentsel mobiliteye karşı güçlü bir tutku geliştirdikten sonra, daha güvenli, daha verimli ve sürdürülebilir yol ağları sunmaya odaklanan bir Trafik Mühendisi olarak kariyerimi sürdürmekteyim."
+                      : "Having developed a strong passion for transport systems and urban mobility, I am pursuing a career as a Traffic Engineer focused on delivering safer, more efficient and sustainable road networks."}
                 </h2>
 
                 <div className="mt-8 space-y-6 text-lg leading-8 text-slate-700">
-                  <p>
-                    {isTurkish
-                      ? "Ulaşım sistemleri ve kentsel mobiliteye karşı güçlü bir tutku geliştirdikten sonra, daha güvenli, daha verimli ve sürdürülebilir yol ağları sunmaya odaklanan bir Trafik Mühendisi olarak kariyerimi sürdürmekteyim."
-                      : "Having developed a strong passion for transport systems and urban mobility, I am pursuing a career as a Traffic Engineer focused on delivering safer, more efficient and sustainable road networks."}
-                  </p>
 
                   <p>
                     {isTurkish
@@ -172,8 +167,8 @@ const resumeExperience = [
 
               <p className="mt-6 text-lg leading-8 text-white/80">
                 {isTurkish
-                  ? "Çalışmalarım; yayaları, bisiklet kullanıcılarını, toplu taşıma kullanıcılarını ve araç hareketliliğini destekleyen, kısıtlı kentsel sokak ortamlarında uygulanabilir mühendislik çözümleri geliştirmeye odaklanmaktadır."
-                  : "My work focuses on delivering practical engineering solutions that support pedestrians, cyclists, public transport and vehicular movement within constrained urban street environments."}
+                  ? "Ulaşım ve kentsel altyapı alanındaki yeni zorluklardan motive oluyor; her gün sokaklarımızı kullanan insanlar için gerçek fayda sağlayan daha güvenli, daha akıllı ve daha erişilebilir çözümler tasarlıyorum."
+                  : "I am driven by new challenges in transport and urban infrastructure, designing safer, smarter and more accessible solutions that deliver real impact for everyday street users."}
               </p>
               </div>
             </Reveal>

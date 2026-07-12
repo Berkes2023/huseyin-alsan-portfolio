@@ -8,7 +8,16 @@ type Props = {
   isTurkish: boolean;
 };
 
-const galleryImages = ["/images/Image1.webp", "/images/Image2.webp"];
+const galleryImages = [
+  "/images/Image1.webp",
+  "/images/Image2.webp",
+  "/images/Image3.webp",
+  "/images/Image4.webp",
+  "/images/Image5.webp",
+  "/images/Image6.webp",
+  "/images/Image7.webp",
+  "/images/Image8.webp",
+];
 
 export default function ImageSlider({ isTurkish }: Props) {
   const [current, setCurrent] = useState(0);
@@ -26,15 +35,14 @@ export default function ImageSlider({ isTurkish }: Props) {
   return (
     <section className="bg-[#F4F7EF] px-6 py-24 text-[#003C3F]">
       <div className="mx-auto max-w-7xl">
-      <div className="mb-12 text-center">
-        <h2 className="font-[var(--font-space-grotesk)] text-4xl font-bold tracking-tight md:text-5xl">
-          {isTurkish
-            ? "Web Sitesi Galerisi"
-            : "Website Gallery"}
-        </h2>
-      </div>
+        <div className="mb-12 text-center">
+          <h2 className="font-[var(--font-space-grotesk)] text-4xl font-bold tracking-tight md:text-5xl">
+            {isTurkish ? "Web Sitesi Galerisi" : "Website Gallery"}
+          </h2>
+        </div>
 
         <div className="relative mx-auto flex max-w-5xl items-center justify-center">
+          {/* Previous Button */}
           <button
             type="button"
             onClick={prevSlide}
@@ -44,15 +52,18 @@ export default function ImageSlider({ isTurkish }: Props) {
             <ChevronLeft size={28} />
           </button>
 
+          {/* Image */}
           <div className="relative h-[620px] w-full max-w-3xl overflow-hidden rounded-3xl bg-white shadow-2xl">
             <Image
               src={galleryImages[current]}
               alt={`Gallery image ${current + 1}`}
               fill
               className="object-cover"
+              priority={current === 0}
             />
           </div>
 
+          {/* Next Button */}
           <button
             type="button"
             onClick={nextSlide}
@@ -63,6 +74,7 @@ export default function ImageSlider({ isTurkish }: Props) {
           </button>
         </div>
 
+        {/* Dots */}
         <div className="mt-8 flex justify-center gap-3">
           {galleryImages.map((image, index) => (
             <button
@@ -77,6 +89,11 @@ export default function ImageSlider({ isTurkish }: Props) {
               aria-label={`Go to image ${index + 1}`}
             />
           ))}
+        </div>
+
+        {/* Image Counter */}
+        <div className="mt-5 text-center text-sm font-medium text-[#003C3F]/60">
+          {current + 1} / {galleryImages.length}
         </div>
       </div>
     </section>
