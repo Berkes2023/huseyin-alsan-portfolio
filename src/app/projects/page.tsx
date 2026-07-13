@@ -338,8 +338,50 @@ export default function ProjectsPage() {
 </section>
 </section>
 
-      <button
-        onClick={() => setLanguage(isTurkish ? "en" : "tr")}
+{/* Independent Portfolio Disclaimer */}
+<section className="border-t border-white/10 bg-[#002C2F] px-6 py-14">
+  <div className="mx-auto max-w-7xl">
+    <div className="rounded-3xl border border-[#B6D957]/20 bg-white/5 p-8 backdrop-blur-sm md:p-10">
+      <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B6D957]">
+        {isTurkish
+          ? "Bağımsız Kişisel Portföy"
+          : "Independent Personal Portfolio"}
+      </p>
+
+      <h2 className="mt-4 font-[var(--font-space-grotesk)] text-2xl font-bold text-white md:text-3xl">
+        {isTurkish
+          ? "Proje ve kuruluş bilgileri"
+          : "Project and organisation information"}
+      </h2>
+
+      <p className="mt-5 max-w-5xl text-sm leading-7 text-white/65 md:text-base">
+        {isTurkish
+          ? "Bu web sitesi bağımsız bir kişisel portföydür. Burada sunulan görüşler, deneyimler ve proje açıklamaları kişiseldir ve herhangi bir mevcut veya önceki işverenin, müşterinin, yerel yönetimin ya da diğer kuruluşun resmi görüşlerini temsil etmek zorunda değildir. Proje bilgileri portföy amacıyla özetlenmiştir ve gizli, kısıtlı veya ticari açıdan hassas bilgileri kasıtlı olarak içermemektedir."
+          : "This website is an independent personal portfolio. The views, experiences and project descriptions presented are personal and do not necessarily represent the official views of any current or previous employer, client, local authority or other organisation. Project information has been summarised for portfolio purposes and is not intended to include confidential, restricted or commercially sensitive information."}
+      </p>
+
+      <p className="mt-4 max-w-5xl text-sm leading-7 text-white/50">
+        {isTurkish
+          ? "Kuruluşlara ve projelere yapılan atıflar yalnızca mesleki deneyim ve portföy çalışmalarını açıklamak amacıyla kullanılmıştır ve sponsorluk, ortaklık veya resmi onay anlamına gelmez."
+          : "References to organisations and projects are included only to describe professional experience and portfolio work and do not imply sponsorship, partnership or official endorsement."}
+      </p>
+
+      <div className="mt-7">
+        <Link
+          href="/terms"
+          className="inline-flex rounded-xl border border-[#B6D957]/30 bg-[#B6D957]/10 px-5 py-3 text-sm font-bold text-[#B6D957] transition hover:bg-[#B6D957] hover:text-[#003C3F]"
+        >
+          {isTurkish
+            ? "Web Sitesi Koşullarını Görüntüle"
+            : "View Website Terms"}
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
+<button
+  onClick={() => setLanguage(isTurkish ? "en" : "tr")}
         className="fixed bottom-6 right-6 z-[999] inline-flex items-center gap-3 rounded-full border border-white/15 bg-[#002C2F]/90 px-5 py-3 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-2xl backdrop-blur-xl transition hover:border-[#B6D957] hover:text-[#B6D957]"
       >
         <Globe2 size={18} />

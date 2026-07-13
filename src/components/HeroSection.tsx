@@ -129,7 +129,7 @@ export default function HeroSection({ isTurkish }: HeroSectionProps) {
             </MagneticLink>
 
             <a
-              href="/contact"
+              href="#contact"
               className="inline-flex w-full items-center justify-center rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-[#003C3F] sm:w-auto"
             >
               {isTurkish ? "İletişim" : "Contact"}

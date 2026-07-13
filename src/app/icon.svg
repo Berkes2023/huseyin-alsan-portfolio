@@ -1,0 +1,35 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+>
+  <!-- Dark green background -->
+  <rect
+    width="512"
+    height="512"
+    rx="110"
+    fill="#003C3F"
+  />
+
+  <!-- Decorative road-inspired lines -->
+  <path
+    d="M95 390L205 120"
+    stroke="#B6D957"
+    stroke-width="30"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M307 120L417 390"
+    stroke="#B6D957"
+    stroke-width="30"
+    stroke-linecap="round"
+  />
+
+  <!-- Centre connection -->
+  <path
+    d="M170 285H342"
+    stroke="#FFFFFF"
+    stroke-width="26"
+    stroke-linecap="round"
+  />
+</svg>
