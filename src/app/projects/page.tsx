@@ -19,266 +19,376 @@ import {
 const projectsData = (isTurkish: boolean) => [
   {
     title: isTurkish
-      ? "Hereford LUF – Tavsiye Niteliğinde 20MPH Hız Limiti"
-      : "Hereford LUF – Advisory 20MPH Limit",
-
-    type: isTurkish
-      ? "Trafik Düzenleme / Hız Yönetimi"
-      : "Traffic Regulation / Speed Management",
-
-    date: "Herefordshire Council",
-
+      ? "A4 Bath Road – Bath–Bristol Sürdürülebilir Koridoru"
+      : "A4 Bath Road – Bath to Bristol Sustainable Corridor",
+    type: isTurkish ? "Aktif Ulaşım" : "Active Travel",
+    date: isTurkish
+      ? "Bath & North East Somerset Council (BANES) · Ağustos 2024 – Şubat 2025"
+      : "Bath & North East Somerset Council (BANES) · August 2024 – February 2025",
     icon: Route,
-
     description: isTurkish
-      ? "ATC hız ve hacim verileri, çarpışma analizleri ve OS haritaları kullanılarak tavsiye niteliğinde 20mph bölgelerinin geliştirilmesine destek sağlandı."
-      : "Supported advisory 20mph zone development using ATC speed and volume data, collision data and OS base mapping.",
-
+      ? "A4 Bath–Bristol Sürdürülebilir Koridoru’nun 2,5 km’lik bölümünün tasarımına katkı sağlanarak sürdürülebilir ulaşım hedefleri doğrultusunda yürüme, bisiklet ve toplu taşıma entegrasyonu desteklendi."
+      : "Contributed to the design of a 2.5 km section of the A4 Bath to Bristol Sustainable Corridor, supporting improved walking, cycling, and public transport integration in line with sustainable transport objectives.",
     details: [
       isTurkish
-        ? "Seçilen güzergahlarda trafik ve çarpışma verileri analiz edildi."
-        : "Collated traffic and collision data for selected routes.",
-
+        ? "AutoCAD kullanılarak taşıt yolları, bordür hizalamaları, otobüs şeritleri, bisiklet yolları ve kaldırımları kapsayan konsept ve ön tasarımların geliştirilmesine destek sağlandı."
+        : "Supported development of concept and preliminary designs, including carriageways, kerb alignments, bus lanes, cycle tracks, and footways using AutoCAD.",
       isTurkish
-        ? "Önerilen 20mph bölgeleri için AutoCAD çizimleri hazırlandı."
-        : "Prepared AutoCAD drawings for proposed advisory 20mph zones.",
-
+        ? "Tasarım hususlarını, riskleri ve ilgili kılavuzlara uyumu ele alan Konsept Tasarım İnceleme Teknik Notu hazırlandı."
+        : "Prepared a Concept Design Review Technical Note addressing design considerations, risks, and compliance with relevant guidance.",
       isTurkish
-        ? "KeySIGN ve Traffic Signs Manual kullanılarak tabela tasarımları oluşturuldu."
-        : "Used KeySIGN and the Traffic Signs Manual to design advisory 20mph signage.",
+        ? "Yerel ve ulusal standartlara uygun yaya geçitleri, sürekli kaldırımlar ve yükseltilmiş platformlar dâhil yaya ve kavşak unsurları tasarlandı."
+        : "Designed pedestrian and junction features including crossings, continuous footways, and raised tables in accordance with local and national standards.",
+      isTurkish
+        ? "Erişilebilir biniş alanları, durak barınakları ve standartlara uygun işaretlemeleri içeren otobüs durağı iyileştirmelerine katkı sağlandı."
+        : "Contributed to bus stop layout improvements, incorporating accessible boarding, shelters, and compliant markings.",
+      isTurkish
+        ? "Altyapı tesisleri ve drenaj kısıtlarıyla koordinasyon sağlanarak tasarım gelişimini destekleyen uygun düzenlemeler önerildi."
+        : "Coordinated with utilities and drainage constraints, proposing appropriate adjustments to support design development.",
+      isTurkish
+        ? "Kavşak yerleşimlerinin doğrulanması için taşıt iz analizi gerçekleştirildi ve çok disiplinli tasarım koordinasyonuna katkı sağlandı."
+        : "Undertook swept path analysis to support junction layout validation and contributed to multidisciplinary design coordination.",
     ],
   },
-
   {
     title: isTurkish
-      ? "A48 Newport Seçenek Geliştirme"
-      : "A48 Newport Option Development",
-
-    type: isTurkish
-      ? "Trafik Modelleme / Veri Analizi"
-      : "Traffic Modelling / Data Analysis",
-
-    date: "Transport for Wales",
-
-    icon: BarChart3,
-
-    description: isTurkish
-      ? "Vissim ve ulaşım anket verileri kullanılarak Newport ağının trafik modelleme çalışmalarına destek sağlandı."
-      : "Supported traffic modelling and option development for the Newport network using Vissim and transport survey data.",
-
-    details: [
-      isTurkish
-        ? "Vissim ağ kodlama çalışmalarına katkı sağlandı."
-        : "Contributed to network coding in Vissim.",
-
-      isTurkish
-        ? "MCTC, ANPR ve ATC veri setleri analiz edildi."
-        : "Analysed MCTC, ANPR and ATC survey datasets.",
-
-      isTurkish
-        ? "Mevcut Durum Raporu için ulaşım altyapı analizleri desteklendi."
-        : "Supported the Existing Conditions Report using transport infrastructure evidence.",
-    ],
-  },
-
-  {
-    title: isTurkish
-      ? "Scholar’s Way Tasarım ve İş Geliştirme Çalışması"
-      : "Scholar’s Way Design and Business Case",
-
-    type: isTurkish
-      ? "Aktif Ulaşım / İş Geliştirme"
-      : "Active Travel / Business Case",
-
-    date: "Bath & North East Somerset Council",
-
-    icon: Route,
-
-    description: isTurkish
-      ? "Bath bölgesinde güvenli aktif ulaşım bağlantıları geliştirmek amacıyla mühendislik tasarım çalışmalarına destek sağlandı."
-      : "Supported active travel engineering interventions for safe and high-quality links in South East Bath.",
-
-    details: [
-      isTurkish
-        ? "Konsept ve seçenek tasarımlarına katkı sağlandı."
-        : "Assisted with concept and optioneering design.",
-
-      isTurkish
-        ? "LTN 1/20, Inclusive Mobility ve Manual for Streets standartları uygulandı."
-        : "Applied guidance including Inclusive Mobility, Manual for Streets and LTN 1/20.",
-
-      isTurkish
-        ? "Aktif ulaşım bağlantıları ve ulaşım dönüşüm projeleri desteklendi."
-        : "Supported design work for active travel links and modal shift.",
-    ],
-  },
-
-  {
-    title: isTurkish
-      ? "Etkinlik Günü Park ve Acil Durum Güzergahları"
-      : "Event Day Parking & Emergency Route Schemes",
-
-    type: isTurkish
-      ? "Trafik Düzenleme Emirleri"
-      : "Traffic Regulation Orders",
-
-    date: "Glasgow City Council",
-
-    icon: CircleDot,
-
-    description: isTurkish
-      ? "Celtic Park ve Ibrox Stadyumu çevresindeki etkinlik günü park ve acil durum güzergahları geliştirildi."
-      : "Developed Event Day Parking and Emergency Route schemes around Celtic Park and Ibrox Stadiums.",
-
-    details: [
-      isTurkish
-        ? "Detaylı TRO tasarım çizimleri hazırlandı."
-        : "Prepared detailed TRO design layouts.",
-
-      isTurkish
-        ? "Park kısıtlamaları ve acil durum erişim tasarımları geliştirildi."
-        : "Designed parking restrictions, emergency routes and access controls.",
-
-      isTurkish
-        ? "Paydaş geri bildirimleri doğrultusunda revizyonlar yapıldı."
-        : "Supported stakeholder-led revisions and regulatory compliance.",
-    ],
-  },
-
-  {
-    title: isTurkish
-      ? "Manchester Road Aktif Ulaşım ve CYCLOPS Kavşak Tasarımı"
-      : "Manchester Road Active Travel and CYCLOPS Junction Design",
-
-    type: isTurkish
-      ? "CYCLOPS / Aktif Ulaşım Tasarımı"
-      : "CYCLOPS / Active Travel Design",
-
-    date: "Transport for Greater Manchester",
-
-    icon: CircleDot,
-
-    description: isTurkish
-      ? "Bolton’daki öncelikli kavşaklar için CYCLOPS kavşak tasarımları geliştirildi."
-      : "Developed CYCLOPS junction designs for eight priority junctions along Manchester Road in Bolton.",
-
-    details: [
-      isTurkish
-        ? "Tek yönlü ve çift yönlü bisiklet altyapı seçenekleri tasarlandı."
-        : "Designed single-directional and bi-directional cycle movement options.",
-
-      isTurkish
-        ? "LinSig kullanılarak tasarımlar analiz edildi."
-        : "Used LinSig to test and assess design configurations.",
-
-      isTurkish
-        ? "Sinyalizasyon, yol işaretleri ve geometrik tasarımlar entegre edildi."
-        : "Integrated junction geometry, crossings, signal staging, markings and signage.",
-    ],
-  },
-
-  {
-    title: isTurkish
-      ? "İrlanda Mobilite Merkezleri"
-      : "NTA Ireland Mobility Hubs",
-
-    type: isTurkish
-      ? "Mobilite Merkezleri"
-      : "Mobility Hubs",
-
-    date: "National Transport Authority",
-
+      ? "Ulusal Mobilite Merkezleri Programı – İrlanda"
+      : "National Mobility Hubs Programme – Ireland",
+    type: isTurkish ? "Mobilite Merkezleri" : "Mobility Hubs",
+    date: isTurkish
+      ? "National Transport Authority · Ağustos 2025 – Kasım 2025"
+      : "National Transport Authority · August 2025 – November 2025",
     icon: Building2,
-
     description: isTurkish
-      ? "İrlanda genelinde sürdürülebilir ulaşımı destekleyen mobilite merkezleri tasarlandı."
-      : "Designed mobility hubs across Ireland supporting sustainable transport infrastructure.",
-
+      ? "Düşük emisyonlu ve paylaşımlı ulaşım seçeneklerini teşvik eden bütünleşik ve sürdürülebilir ulaşım tesislerinin tasarımına katkı sağlayarak ülke çapındaki mobilite merkezi programının sunumu desteklendi."
+      : "Supported the delivery of a nationwide mobility hub programme, contributing to the design of integrated, sustainable transport facilities promoting low-emission and shared travel options.",
     details: [
       isTurkish
-        ? "Bisiklet parkları, EV şarj noktaları ve scooter alanları tasarlandı."
-        : "Integrated cycle stands, EV charging and scooter facilities.",
-
+        ? "Ulusal standartlar ve yerel gerekliliklerle uyumlu olarak birden fazla sahada yerleşim tasarımları geliştirildi."
+        : "Developed layout designs across multiple sites, aligning with national standards and local requirements.",
       isTurkish
-        ? "NTA standartlarına uygun yol işaretleri ve çizgiler uygulandı."
-        : "Applied NTA compliant signage and road markings.",
-
+        ? "Doğru ve bağlama duyarlı tasarım yerleşimleri üretmek için OS harita verileri kullanıldı."
+        : "Utilised OS mapping data to produce accurate, context-driven design layouts.",
       isTurkish
-        ? "Çoklu ulaşım modlarını destekleyen merkez çözümleri geliştirildi."
-        : "Developed multimodal transport hub solutions.",
+        ? "Bisiklet parkları, e-scooter alanları, elektrikli araç şarj noktaları ve paylaşımlı ulaşım tesisleri tasarımlara entegre edildi."
+        : "Integrated infrastructure such as cycle parking, e-scooter bays, EV charging, and shared mobility facilities.",
+      isTurkish
+        ? "İlgili kılavuzlara uygun yol işaretlemeleri ve trafik levhaları uygulandı."
+        : "Applied compliant road markings and signage in accordance with relevant guidance.",
+      isTurkish
+        ? "Kesintisiz ve daha çevreci ulaşım seçeneklerini desteklemek amacıyla erişilebilirlik, güvenlik ve kullanıcı deneyimi dikkate alındı."
+        : "Considered accessibility, safety, and user experience to support seamless and greener travel choices.",
+      isTurkish
+        ? "Tutarlı tasarım standartları korunarak birden fazla saha tasarımı eş zamanlı yönetildi."
+        : "Managed multiple site designs concurrently while maintaining consistent design standards.",
     ],
   },
-
   {
     title: isTurkish
-      ? "Cardiff Şehir Merkezi Güney Modelleme"
-      : "Cardiff City Centre South Modelling",
-
-    type: isTurkish
-      ? "Sinyal Modelleme"
-      : "Signal Modelling",
-
-    date: "Cardiff City Council",
-
-    icon: Map,
-
+      ? "A48 Newport Road – Seçenek Geliştirme Çalışması"
+      : "A48 Newport Road – Option Development Study",
+    type: isTurkish ? "Trafik Modellemesi" : "Traffic Modelling",
+    date: isTurkish
+      ? "Transport for Wales · Eylül 2023 – Nisan 2024"
+      : "Transport for Wales · September 2023 – April 2024",
+    icon: BarChart3,
     description: isTurkish
-      ? "LinSig kullanılarak trafik sinyal modelleme ve performans analizleri desteklendi."
-      : "Supported traffic signal modelling and performance analysis using LinSig.",
-
+      ? "A48 Newport koridorundaki mevcut ulaşım koşullarını ve gelecekteki iyileştirmeleri değerlendiren seçenek geliştirme çalışmasına destek sağlandı."
+      : "Supported an option development study assessing transport conditions and future improvements along the A48 Newport corridor.",
     details: [
       isTurkish
-        ? "Sinyal fazları ve döngü süreleri analiz edildi."
-        : "Analysed signal phase and cycle timings.",
-
+        ? "Ağ performansını simüle etmek amacıyla bir Vissim trafik modelinin geliştirilmesine yardımcı olundu."
+        : "Assisted in development of a Vissim traffic model to simulate network performance.",
       isTurkish
-        ? "Gecikme ve kuyruk performans değerlendirmeleri yapıldı."
-        : "Supported queue and delay performance reviews.",
-
+        ? "Eğilimleri ve trafik örüntülerini belirlemek için MCTC, ANPR ve ATC ulaşım veri setleri Excel kullanılarak analiz edildi."
+        : "Analysed transport datasets (MCTC, ANPR, ATC) using Excel to identify trends and traffic patterns.",
       isTurkish
-        ? "ATC ve MCC veri analizleri gerçekleştirildi."
-        : "Worked with ATC and MCC traffic datasets.",
+        ? "Model kalibrasyonu ve doğrulama çalışmalarına katkı sağlandı."
+        : "Contributed to model calibration and validation activities.",
+      isTurkish
+        ? "Temel ağ performansını özetleyen Mevcut Durum Raporu’nun hazırlanmasına destek sağlandı."
+        : "Supported preparation of the Existing Conditions Report, summarising baseline network performance.",
+      isTurkish
+        ? "Veriye dayalı çıkarımlar sunmak üzere çok disiplinli bir ekip içinde çalışıldı."
+        : "Worked within a multidisciplinary team to deliver data-driven insights.",
     ],
   },
-
   {
     title: isTurkish
-      ? "Öğrenci Sokakları Projeleri"
-      : "School Streets Projects",
-
+      ? "Etkinlik Günü Otoparkı ve Acil Durum Güzergâhları"
+      : "Event Day Parking & Emergency Routes",
     type: isTurkish
-      ? "TRO / Yol İşaretleme"
-      : "TRO / Road Markings",
-
-    date: "Cardiff City Council",
-
+      ? "Trafik Düzenleme Emirleri (TRO)"
+      : "Traffic Regulation Orders (TROs)",
+    date: isTurkish
+      ? "Glasgow City Council · Nisan 2024 – Haziran 2024"
+      : "Glasgow City Council · April 2024 – June 2024",
+    icon: CircleDot,
+    description: isTurkish
+      ? "Büyük stadyum bölgeleri için etkinlik günü park düzenlemeleri ve acil erişim şemalarının geliştirilmesine destek sağlandı."
+      : "Supported the development of event day parking and emergency access schemes for major stadium areas.",
+    details: [
+      isTurkish
+        ? "Otopark yerleşimleri ve acil durum güzergâhı tasarımlarının hazırlanmasına yardımcı olundu."
+        : "Assisted in preparation of parking layouts and emergency route designs.",
+      isTurkish
+        ? "Düzenleyici gerekliliklerle uyum sağlanarak TRO sürecine katkı sunuldu."
+        : "Contributed to the TRO process, ensuring alignment with regulatory requirements.",
+      isTurkish
+        ? "Paydaş koordinasyonu ve tasarım geliştirme çalışmalarına destek sağlandı."
+        : "Supported stakeholder coordination and design development.",
+      isTurkish
+        ? "Etkinlikler sırasında trafik yönetimini ve güvenliği iyileştirecek uygulanabilir çözümlerin geliştirilmesine yardımcı olundu."
+        : "Helped deliver practical solutions to improve traffic management and safety during events.",
+    ],
+  },
+  {
+    title: isTurkish
+      ? "Yerleşik Otopark Bölgeleri"
+      : "Residents’ Parking Zones",
+    type: isTurkish
+      ? "Trafik Düzenleme Emirleri (TRO)"
+      : "Traffic Regulation Orders (TROs)",
+    date: isTurkish
+      ? "Bath & North East Somerset Council · Haziran 2025 – Devam Ediyor"
+      : "Bath & North East Somerset Council · June 2025 – Ongoing",
     icon: Landmark,
-
     description: isTurkish
-      ? "Cardiff genelinde 20’den fazla alan için TRO ve yol işaretleme tasarımları geliştirildi."
-      : "Delivered TRO and road marking schemes across more than 20 Cardiff locations.",
-
+      ? "Otopark talebini yönetmek ve yerel erişilebilirliği geliştirmek amacıyla yerleşim alanı otopark şemalarının tasarım ve geliştirme çalışmalarına katkı sağlanmaktadır."
+      : "Contributing to the design and development of residential parking schemes to manage demand and improve local accessibility.",
     details: [
       isTurkish
-        ? "Okul sokakları ve yerleşim bölgeleri için tasarımlar geliştirildi."
-        : "Developed layouts for school streets and residential areas.",
-
+        ? "Otopark ve erişim gereksinimlerini anlamak amacıyla saha değerlendirmeleri gerçekleştirildi."
+        : "Undertook site assessments to understand parking and access requirements.",
       isTurkish
-        ? "Bisiklet ve yaya altyapıları entegre edildi."
-        : "Integrated pedestrian and cycle facilities.",
-
+        ? "Yerleşikler, ziyaretçiler ve hizmet erişimi ihtiyaçlarını dengeleyen tasarım önerileri geliştirildi."
+        : "Developed design proposals balancing resident, visitor, and service access needs.",
       isTurkish
-        ? "Yerel yönetim ve paydaş geri bildirimleri uygulandı."
-        : "Implemented local authority and stakeholder revisions.",
+        ? "Otopark kısıtlamaları ve yerleşimlerini içeren standartlara uygun TRO çizimleri üretildi."
+        : "Produced compliant TRO drawings including parking restrictions and layouts.",
+      isTurkish
+        ? "Görselleştirme ve danışma süreçlerini desteklemek üzere GIS shapefile dosyaları oluşturuldu."
+        : "Created GIS shapefiles to support visualisation and consultation.",
+      isTurkish
+        ? "Dijital çıktılar aracılığıyla önerilerin açık biçimde iletilmesi desteklendi."
+        : "Supported clear communication of proposals through digital outputs.",
+    ],
+  },
+  {
+    title: isTurkish
+      ? "Okul Sokakları ve Trafik Yönetimi"
+      : "School Streets & Traffic Management",
+    type: isTurkish
+      ? "Trafik Düzenleme Emirleri (TRO)"
+      : "Traffic Regulation Orders (TROs)",
+    date: isTurkish
+      ? "Cardiff City Council · Şubat 2025 – Devam Ediyor"
+      : "Cardiff City Council · February 2025 – Ongoing",
+    icon: Landmark,
+    description: isTurkish
+      ? "Güvenliği artırmayı ve aktif ulaşımı teşvik etmeyi amaçlayan çok sayıda trafik yönetimi şemasının sunumuna destek sağlanmaktadır."
+      : "Supported the delivery of multiple traffic management schemes aimed at improving safety and promoting active travel.",
+    details: [
+      isTurkish
+        ? "Otopark kontrollerini ve erişim kısıtlamalarını kapsayan TRO çizimleri geliştirildi."
+        : "Developed TRO drawings covering parking controls and access restrictions.",
+      isTurkish
+        ? "İlgili yol işaretlemeleri ve yerleşim düzenleri tasarlandı."
+        : "Designed associated road markings and layouts.",
+      isTurkish
+        ? "Tasarımlar farklı kentsel ortam ve kısıtlara uyarlanarak geliştirildi."
+        : "Adapted designs to suit varied urban environments and constraints.",
+      isTurkish
+        ? "Paydaş katılımı ve tasarım iyileştirme süreçlerine katkı sağlandı."
+        : "Contributed to stakeholder engagement and design refinement.",
+    ],
+  },
+  {
+    title: isTurkish
+      ? "Cardiff Şehir Merkezi Güney"
+      : "Cardiff City Centre South",
+    type: isTurkish ? "Ulaşım Modellemesi" : "Transport Modelling",
+    date: isTurkish
+      ? "Cardiff City Council · Şubat 2026 – Devam Ediyor"
+      : "Cardiff City Council · February 2026 – Ongoing",
+    icon: Map,
+    description: isTurkish
+      ? "Ağ optimizasyonunu desteklemek amacıyla trafik modelleme ve kavşak analizi çalışmalarına katkı sağlanmaktadır."
+      : "Supporting traffic modelling and junction analysis to inform network optimisation.",
+    details: [
+      isTurkish
+        ? "LinSig modellemesi ve trafik sinyal verisi analizlerine yardımcı olundu."
+        : "Assisted with LinSig modelling and traffic signal data analysis.",
+      isTurkish
+        ? "Doğru temsil sağlamak amacıyla fazlama ve döngü süreleri incelendi."
+        : "Reviewed phasing and cycle times to ensure accurate representation.",
+      isTurkish
+        ? "Gecikme, kuyruk ve kavşak performansı analizlerine katkı sağlandı."
+        : "Contributed to analysis of delays, queues, and junction performance.",
+      isTurkish
+        ? "Trafik verileri kullanılarak talep profillemesi desteklendi."
+        : "Supported demand profiling using traffic data.",
+      isTurkish
+        ? "Yoğun saat analizleri için grafik çıktılar üretildi."
+        : "Produced graphical outputs for peak period analysis.",
+    ],
+  },
+  {
+    title: isTurkish
+      ? "Manchester Road Koridoru"
+      : "Manchester Road Corridor",
+    type: isTurkish ? "Aktif Ulaşım" : "Active Travel",
+    date: isTurkish
+      ? "Transport for Greater Manchester · Eylül 2026 – Devam Ediyor"
+      : "Transport for Greater Manchester · September 2026 – Ongoing",
+    icon: CircleDot,
+    description: isTurkish
+      ? "Aktif ulaşım ve CYCLOPS prensiplerini içeren çok sayıda kavşağın tasarımına katkı sağlanmaktadır."
+      : "Contributing to the design of multiple junctions incorporating active travel and CYCLOPS principles.",
+    details: [
+      isTurkish
+        ? "Kavşak tasarımlarının ve bisiklet altyapısı yerleşimlerinin geliştirilmesi desteklendi."
+        : "Supported development of junction designs and cycle infrastructure layouts.",
+      isTurkish
+        ? "Farklı bisiklet tesisi düzenlerini içeren tasarım seçenekleri hazırlandı."
+        : "Prepared design options including different cycle facility configurations.",
+      isTurkish
+        ? "Geçitler, bordürler, işaret levhaları ve yol çizgilerinin standartlara uygun yerleşimlerine katkı sağlandı."
+        : "Contributed to compliant layouts of crossings, kerbs, signage, and markings.",
+      isTurkish
+        ? "Çok disiplinli ekipler arasındaki koordinasyona yardımcı olundu."
+        : "Assisted with coordination across multidisciplinary teams.",
+      isTurkish
+        ? "Kısıtlar ve geri bildirimler doğrultusunda yinelemeli tasarım geliştirmeleri desteklendi."
+        : "Supported iterative design improvements responding to constraints and feedback.",
+    ],
+  },
+  {
+    title: isTurkish
+      ? "Great Grid Upgrade (WMEL) – Geçici Erişim Güzergâhları"
+      : "Great Grid Upgrade (WMEL) – Temporary Access Routes",
+    type: isTurkish
+      ? "Geçici İşler / İnşaat Erişimi"
+      : "Temporary Works / Construction Access",
+    date: isTurkish
+      ? "Ulusal Altyapı Projesi · Nisan 2026 – Devam Ediyor"
+      : "National Infrastructure Project · April 2026 – Ongoing",
+    icon: Route,
+    description: isTurkish
+      ? "Büyük ölçekli altyapı çalışmalarını destekleyen geçici erişim güzergâhlarının tasarımına katkı sağlanmaktadır."
+      : "Contributing to the design of temporary access routes supporting major infrastructure delivery.",
+    details: [
+      isTurkish
+        ? "Civil 3D kullanılarak servis ve nakliye yolu güzergâhlarının geliştirilmesine yardımcı olundu."
+        : "Assisted in development of haul route alignments using Civil 3D.",
+      isTurkish
+        ? "Güzergâh tasarımında çevresel ve planlama kısıtları dikkate alındı."
+        : "Considered environmental and planning constraints in route design.",
+      isTurkish
+        ? "Araç erişim gereksinimlerini desteklemek amacıyla taşıt iz analizi gerçekleştirildi."
+        : "Undertook swept path analysis to support vehicle access requirements.",
+      isTurkish
+        ? "Karayolu ağına güvenli erişim bağlantılarının tasarımına katkı sağlandı."
+        : "Contributed to design of safe access connections to the highway network.",
+      isTurkish
+        ? "Geçici trafik yönetimi yerleşimlerinin hazırlanması desteklendi."
+        : "Supported preparation of temporary traffic management layouts.",
+    ],
+  },
+  {
+    title: isTurkish
+      ? "20mph Tavsiye Bölgeleri – Hereford LUF"
+      : "20mph Advisory Zones – Hereford LUF",
+    type: isTurkish
+      ? "Trafik Düzenleme Emirleri (TRO)"
+      : "Traffic Regulation Orders (TROs)",
+    date: isTurkish
+      ? "Hereford LUF Programme · Ekim 2023 – Ocak 2024"
+      : "Hereford LUF Programme · October 2023 – January 2024",
+    icon: Route,
+    description: isTurkish
+      ? "Kentsel güvenliği geliştirmek amacıyla tavsiye niteliğindeki hız azaltma önlemlerinin geliştirilmesine destek sağlandı."
+      : "Supported development of advisory speed reduction measures to improve urban safety.",
+    details: [
+      isTurkish
+        ? "Şema geliştirmeyi desteklemek üzere trafik ve çarpışma verileri analiz edildi."
+        : "Analysed traffic and collision data to inform scheme development.",
+      isTurkish
+        ? "Tasarım çizimleri ve yerleşimlerin hazırlanmasına yardımcı olundu."
+        : "Assisted in preparation of design drawings and layouts.",
+      isTurkish
+        ? "TRO dokümantasyonu ve koordinasyon çalışmalarına destek sağlandı."
+        : "Supported TRO documentation and coordination.",
+      isTurkish
+        ? "Standartlara uygun trafik levhası tasarımına katkı sağlandı."
+        : "Contributed to compliant signage design.",
+    ],
+  },
+  {
+    title: isTurkish
+      ? "A4174 / M32 Koridoru"
+      : "A4174 / M32 Corridor",
+    type: isTurkish ? "Aktif Ulaşım" : "Active Travel",
+    date: isTurkish
+      ? "Bristol City Council · Ekim 2023 – Ocak 2024"
+      : "Bristol City Council · October 2023 – January 2024",
+    icon: Route,
+    description: isTurkish
+      ? "Yeni bir Park & Ride şemasıyla bağlantılı aktif ulaşım iyileştirmelerinin erken aşama tasarımına destek sağlandı."
+      : "Supported early-stage design for active travel improvements linked to a new Park & Ride scheme.",
+    details: [
+      isTurkish
+        ? "Saha değerlendirmeleri ve kısıt belirleme çalışmaları gerçekleştirildi."
+        : "Undertook site assessments and constraint identification.",
+      isTurkish
+        ? "Ön tasarım yerleşimlerinin geliştirilmesine yardımcı olundu."
+        : "Assisted in development of preliminary design layouts.",
+      isTurkish
+        ? "Yaya geçitleri, bisiklet altyapısı ve kavşakların tasarımına katkı sağlandı."
+        : "Contributed to design of crossings, cycle infrastructure, and junctions.",
+      isTurkish
+        ? "Araç izleme ve yerleşim doğrulama çalışmaları desteklendi."
+        : "Supported vehicle tracking and layout validation.",
+      isTurkish
+        ? "Standartlara uygun yol işaretleme tasarımları hazırlandı."
+        : "Prepared compliant road marking designs.",
+    ],
+  },
+  {
+    title: isTurkish
+      ? "A4 Bath Road – Otobüs Durağı İyileştirmeleri"
+      : "A4 Bath Road – Bus Stop Improvements",
+    type: isTurkish ? "Otobüs Altyapısı" : "Bus Infrastructure",
+    date: isTurkish
+      ? "Bristol City Council · Aralık 2025 – Ocak 2026"
+      : "Bristol City Council · December 2025 – January 2026",
+    icon: Building2,
+    description: isTurkish
+      ? "Otobüs durağı altyapısı iyileştirmelerinin tasarım ve inceleme çalışmalarına destek sağlandı."
+      : "Supported design and review of bus stop infrastructure improvements.",
+    details: [
+      isTurkish
+        ? "Standartlara uygun otobüs durağı yerleşimlerinin geliştirilmesine yardımcı olundu."
+        : "Assisted in development of compliant bus stop layouts.",
+      isTurkish
+        ? "Durak barınakları, gerçek zamanlı bilgi sistemleri ve erişilebilirlik unsurlarının entegrasyonuna katkı sağlandı."
+        : "Contributed to integration of shelters, RTI systems, and accessibility features.",
+      isTurkish
+        ? "İlgili yaya geçitleri ve erişim iyileştirmelerinin tasarımı desteklendi."
+        : "Supported design of associated crossings and access improvements.",
+      isTurkish
+        ? "Drenaj hususları ve yerleşim kısıtları incelendi."
+        : "Reviewed drainage considerations and layout constraints.",
+      isTurkish
+        ? "Tasarım çıktılarının standartlar ve paydaş girdileri doğrultusunda koordinasyonuna yardımcı olundu."
+        : "Helped coordinate design outputs in line with standards and stakeholder input.",
     ],
   },
 ];
 
 export default function ProjectsPage() {
   const [language, setLanguage] = useState<"en" | "tr">("en");
-
   const isTurkish = language === "tr";
-
   const projects = projectsData(isTurkish);
 
   return (
@@ -289,7 +399,10 @@ export default function ProjectsPage() {
             href="/"
             className="font-[var(--font-space-grotesk)] text-lg font-bold tracking-tight text-white"
           >
-            Huseyin<span className="text-[#B6D957]"> Alsan</span>
+            {isTurkish ? "Hüseyin" : "Huseyin"}
+            <span className="text-[#B6D957]">
+              {isTurkish ? " Alşan" : " Alsan"}
+            </span>
           </Link>
 
           <Link
@@ -297,7 +410,6 @@ export default function ProjectsPage() {
             className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-4 py-2 text-sm text-white/80 transition hover:bg-white hover:text-[#003C3F]"
           >
             <ArrowLeft size={16} />
-
             {isTurkish ? "Ana Sayfa" : "Back Home"}
           </Link>
         </nav>
@@ -319,6 +431,7 @@ export default function ProjectsPage() {
                 ? "Ulaşım planlama, trafik mühendisliği, aktif ulaşım, TRO tasarımı, modelleme ve altyapı geliştirme alanlarındaki seçilmiş mühendislik projeleri."
                 : "Selected engineering projects across transport planning, traffic engineering, active travel, modelling and infrastructure development."}
             </p>
+
             <div className="mt-10">
               <Link
                 href="/#contact"
@@ -332,67 +445,68 @@ export default function ProjectsPage() {
           </header>
         </Reveal>
 
- <section className="grid gap-6 md:grid-cols-2">
-  {projects.map((project, index) => (
-    <Reveal key={project.title} delay={index * 0.06}>
-      <ProjectHoverCard
-        title={project.title}
-        type={project.type}
-        date={project.date}
-        description={project.description}
-        details={project.details}
-        icon={project.icon}
-      />
-    </Reveal>
-  ))}
-</section>
-</section>
+        <section className="grid gap-6 md:grid-cols-2">
+          {projects.map((project, index) => (
+            <Reveal key={project.title} delay={index * 0.06}>
+              <ProjectHoverCard
+                title={project.title}
+                type={project.type}
+                date={project.date}
+                description={project.description}
+                details={project.details}
+                icon={project.icon}
+              />
+            </Reveal>
+          ))}
+        </section>
+      </section>
 
-{/* Independent Portfolio Disclaimer */}
-<section className="border-t border-white/10 bg-[#002C2F] px-6 py-14">
-  <div className="mx-auto max-w-7xl">
-    <div className="rounded-3xl border border-[#B6D957]/20 bg-white/5 p-8 backdrop-blur-sm md:p-10">
-      <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B6D957]">
-        {isTurkish
-          ? "Bağımsız Kişisel Portföy"
-          : "Independent Personal Portfolio"}
-      </p>
+      <section className="border-t border-white/10 bg-[#002C2F] px-6 py-14">
+        <div className="mx-auto max-w-7xl">
+          <div className="rounded-3xl border border-[#B6D957]/20 bg-white/5 p-8 backdrop-blur-sm md:p-10">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B6D957]">
+              {isTurkish
+                ? "Bağımsız Kişisel Portföy"
+                : "Independent Personal Portfolio"}
+            </p>
 
-      <h2 className="mt-4 font-[var(--font-space-grotesk)] text-2xl font-bold text-white md:text-3xl">
-        {isTurkish
-          ? "Proje ve kuruluş bilgileri"
-          : "Project and organisation information"}
-      </h2>
+            <h2 className="mt-4 font-[var(--font-space-grotesk)] text-2xl font-bold text-white md:text-3xl">
+              {isTurkish
+                ? "Proje ve kuruluş bilgileri"
+                : "Project and organisation information"}
+            </h2>
 
-      <p className="mt-5 max-w-5xl text-sm leading-7 text-white/65 md:text-base">
-        {isTurkish
-          ? "Bu web sitesi bağımsız bir kişisel portföydür. Burada sunulan görüşler, deneyimler ve proje açıklamaları kişiseldir ve herhangi bir mevcut veya önceki işverenin, müşterinin, yerel yönetimin ya da diğer kuruluşun resmi görüşlerini temsil etmek zorunda değildir. Proje bilgileri portföy amacıyla özetlenmiştir ve gizli, kısıtlı veya ticari açıdan hassas bilgileri kasıtlı olarak içermemektedir."
-          : "This website is an independent personal portfolio. The views, experiences and project descriptions presented are personal and do not necessarily represent the official views of any current or previous employer, client, local authority or other organisation. Project information has been summarised for portfolio purposes and is not intended to include confidential, restricted or commercially sensitive information."}
-      </p>
+            <p className="mt-5 max-w-5xl text-sm leading-7 text-white/65 md:text-base">
+              {isTurkish
+                ? "Bu web sitesi bağımsız bir kişisel portföydür. Burada sunulan görüşler, deneyimler ve proje açıklamaları kişiseldir ve herhangi bir mevcut veya önceki işverenin, müşterinin, yerel yönetimin ya da diğer kuruluşun resmi görüşlerini temsil etmek zorunda değildir. Proje bilgileri portföy amacıyla özetlenmiştir ve gizli, kısıtlı veya ticari açıdan hassas bilgileri kasıtlı olarak içermemektedir."
+                : "This website is an independent personal portfolio. The views, experiences and project descriptions presented are personal and do not necessarily represent the official views of any current or previous employer, client, local authority or other organisation. Project information has been summarised for portfolio purposes and is not intended to include confidential, restricted or commercially sensitive information."}
+            </p>
 
-      <p className="mt-4 max-w-5xl text-sm leading-7 text-white/50">
-        {isTurkish
-          ? "Kuruluşlara ve projelere yapılan atıflar yalnızca mesleki deneyim ve portföy çalışmalarını açıklamak amacıyla kullanılmıştır ve sponsorluk, ortaklık veya resmi onay anlamına gelmez."
-          : "References to organisations and projects are included only to describe professional experience and portfolio work and do not imply sponsorship, partnership or official endorsement."}
-      </p>
+            <p className="mt-4 max-w-5xl text-sm leading-7 text-white/50">
+              {isTurkish
+                ? "Kuruluşlara ve projelere yapılan atıflar yalnızca mesleki deneyim ve portföy çalışmalarını açıklamak amacıyla kullanılmıştır ve sponsorluk, ortaklık veya resmi onay anlamına gelmez."
+                : "References to organisations and projects are included only to describe professional experience and portfolio work and do not imply sponsorship, partnership or official endorsement."}
+            </p>
 
-      <div className="mt-7">
-        <Link
-          href="/terms"
-          className="inline-flex rounded-xl border border-[#B6D957]/30 bg-[#B6D957]/10 px-5 py-3 text-sm font-bold text-[#B6D957] transition hover:bg-[#B6D957] hover:text-[#003C3F]"
-        >
-          {isTurkish
-            ? "Web Sitesi Koşullarını Görüntüle"
-            : "View Website Terms"}
-        </Link>
-      </div>
-    </div>
-  </div>
-</section>
+            <div className="mt-7">
+              <Link
+                href="/terms"
+                className="inline-flex rounded-xl border border-[#B6D957]/30 bg-[#B6D957]/10 px-5 py-3 text-sm font-bold text-[#B6D957] transition hover:bg-[#B6D957] hover:text-[#003C3F]"
+              >
+                {isTurkish
+                  ? "Web Sitesi Koşullarını Görüntüle"
+                  : "View Website Terms"}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<button
-  onClick={() => setLanguage(isTurkish ? "en" : "tr")}
+      <button
+        type="button"
+        onClick={() => setLanguage(isTurkish ? "en" : "tr")}
         className="fixed bottom-6 right-6 z-[999] inline-flex items-center gap-3 rounded-full border border-white/15 bg-[#002C2F]/90 px-5 py-3 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-2xl backdrop-blur-xl transition hover:border-[#B6D957] hover:text-[#B6D957]"
+        aria-label={isTurkish ? "Switch to English" : "Türkçeye geç"}
       >
         <Globe2 size={18} />
         {isTurkish ? "EN" : "TR"}

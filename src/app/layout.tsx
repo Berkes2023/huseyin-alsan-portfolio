@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -30,9 +31,7 @@ export const metadata: Metadata = {
   ],
 
   creator: "Hüseyin Alşan",
-
   publisher: "Hüseyin Alşan",
-
   category: "Engineering",
 
   keywords: [
@@ -73,11 +72,8 @@ export const metadata: Metadata = {
       "Explore the professional portfolio of Hüseyin Alşan, featuring transport planning, traffic engineering, active travel, modelling and infrastructure projects.",
 
     siteName: "Hüseyin Alşan Portfolio",
-
     locale: "en_GB",
-
     alternateLocale: ["tr_TR"],
-
     type: "website",
   },
 
@@ -101,7 +97,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
       >
-        {children}
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
   );
