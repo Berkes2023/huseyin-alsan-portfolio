@@ -61,7 +61,7 @@ export default function HeroSection({ isTurkish }: HeroSectionProps) {
       <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl items-center">
         <div ref={textRef} className="w-full max-w-3xl">
           <p className="mb-6 font-[var(--font-space-grotesk)] text-xs font-bold uppercase tracking-[0.28em] text-[#B6D957] sm:text-sm sm:tracking-[0.35em]">
-            HUSEYIN ALSAN
+            {isTurkish ? "Hüseyin Alşan" : "HUSEYIN ALSAN"}
           </p>
 
           <p className="text-sm text-[#B6D957] sm:text-base">
@@ -70,14 +70,14 @@ export default function HeroSection({ isTurkish }: HeroSectionProps) {
 
           <h1 className="mt-3 max-w-3xl font-[var(--font-space-grotesk)] text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-7xl">
             {isTurkish
-              ? "Daha güvenli, daha akıllı ve daha erişilebilir sokaklar tasarlıyorum."
+              ? "Şehirlerin geleceğini güvenlik, erişilebilirlik ve yenilikçi çözümlerle tasarlıyorum."
               : "Designing safer, smarter and more accessible streets."}
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
             {isTurkish
-              ? "Huseyin Alsan; yol ve sokak tasarımı, aktif ulaşım, trafik modelleme, trafik sinyalizasyonu, işaretleme ve toplu taşıma altyapısı alanlarında çalışan bir Trafik Mühendisidir."
-              : "Huseyin Alsan is a Traffic Engineer working across road and street design, active travel, traffic modelling, traffic signals, signage and public transport infrastructure."}
+              ? "Hüseyin Alşan; daha güvenli, daha akıllı ve daha erişilebilir ulaşım ağları oluşturmak amacıyla yol ve sokak tasarımı, aktif ulaşım, trafik modelleme, trafik sinyalizasyonu, işaretleme ve toplu taşıma altyapısı alanlarında çalışan bir Trafik Mühendisidir."
+              : "Huseyin Alsan is a Traffic Engineer specialising in road and street design, active travel, traffic modelling, traffic signals, signage and public transport infrastructure, delivering safer, smarter and more accessible transport networks."}
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">

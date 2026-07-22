@@ -19,50 +19,59 @@ export default function ExpertiseSection({
 }: ExpertiseSectionProps) {
   const services = [
     {
-      title: isTurkish ? "Aktif Ulaşım Tasarımı" : "Active Travel Design",
+      title: isTurkish
+        ? "Yol ve Sokak Tasarımı"
+        : "Road & Street Design",
       description: isTurkish
-        ? "Bisiklet yolları, yaya altyapıları, CYCLOPS kavşakları ve sürdürülebilir ulaşım koridorlarının tasarımı."
-        : "Design of cycle infrastructure, pedestrian facilities, CYCLOPS junctions and sustainable transport corridors.",
+        ? "Güvenlik, erişilebilirlik ve kullanıcı deneyimine odaklanarak yol düzenleri, sokak tasarımları ve kamusal alan iyileştirmeleri için tasarım desteği."
+        : "Design support for road layouts, streetscapes, and public realm improvements with a focus on safety, accessibility, and user experience.",
+      icon: Route,
+    },
+    {
+      title: isTurkish
+        ? "Aktif Ulaşım Tasarımı"
+        : "Active Travel Design",
+      description: isTurkish
+        ? "Daha güvenli ve kapsayıcı kentsel ortamlar oluşturmak amacıyla bisiklet yolları, yaya hareketliliği ve aktif ulaşım altyapılarının tasarımı."
+        : "Cycle lane, pedestrian movement and active travel infrastructure design to create safer and more inclusive urban environments.",
       icon: Bike,
     },
     {
-      title: isTurkish ? "Trafik Modellemesi" : "Traffic Modelling",
+      title: isTurkish
+        ? "Otobüs Altyapısı"
+        : "Bus Infrastructure",
       description: isTurkish
-        ? "Vissim, LinSig ve veri analizleri kullanılarak trafik performansının değerlendirilmesi."
-        : "Traffic analysis using Vissim, LinSig and transport datasets to support evidence-based decisions.",
+        ? "Otobüs durakları, gerçek zamanlı bilgi sistemleri, yol işaretlemeleri, erişilebilirlik çözümleri ve güzergâh optimizasyonunu kapsayan bütüncül otobüs altyapısı tasarımı ve iyileştirmeleri."
+        : "Contribution to the design of bus lanes, bus stops, and public transport priority measures to improve sustainable mobility.",
+      icon: Bus,
+    },
+    {
+      title: isTurkish
+        ? "Trafik Modellemesi"
+        : "Traffic Modelling",
+      description: isTurkish
+        ? "Vissim, LinSig ve veri analizleri kullanılarak trafik performansının değerlendirilmesi ve yeni tasarım seçeneklerinin geliştirilmesi."
+        : "Microsimulation, junction analysis, and transport modelling to support data-driven design and planning decisions.",
       icon: Car,
     },
     {
       title: isTurkish
-        ? "Trafik Düzenleme Emirleri"
-        : "Traffic Regulation Orders",
+        ? "Mobilite Merkezleri"
+        : "Mobility Hubs",
       description: isTurkish
-        ? "Park düzenlemeleri, okul caddeleri, hız yönetimi ve erişim kısıtlamaları için TRO tasarımı ve uygulamaları."
-        : "Design and delivery of TRO schemes including parking controls, school streets and speed management measures.",
-      icon: Map,
-    },
-    {
-      title: isTurkish ? "Otobüs Altyapısı" : "Bus Infrastructure",
-      description: isTurkish
-        ? "Otobüs durakları, RTI sistemleri, yol işaretlemeleri ve erişilebilir toplu taşıma tasarımları."
-        : "Bus stop design, RTI infrastructure, road markings and public transport accessibility improvements.",
-      icon: Bus,
-    },
-    {
-      title: isTurkish ? "Mobilite Merkezleri" : "Mobility Hubs",
-      description: isTurkish
-        ? "Bisiklet parkları, e-scooter alanları, elektrikli araç şarj noktaları ve çok modlu ulaşım merkezlerinin tasarımı."
-        : "Integrated mobility hubs including cycle parking, e-scooter bays, EV charging and shared mobility facilities.",
+        ? "Kesintisiz, sürdürülebilir ve daha çevreci ulaşım seçeneklerini desteklemek amacıyla bisiklet parkları, e-scooter alanları, elektrikli araç şarj noktaları ve paylaşımlı ulaşım hizmetlerini içeren çok modlu ulaşım merkezlerinin tasarımı ve entegrasyonu."
+        : "Design and integration of multi-modal transport hubs, incorporating facilities such as cycle parking, e-scooter bays, EV charging, and shared mobility services to support seamless, sustainable, and greener travel choices.",
       icon: Building2,
     },
     {
-      title: isTurkish ? "Yol ve Sokak Tasarımı" : "Road & Street Design",
+      title: isTurkish
+        ? "Trafik Düzenleme Emirleri (TRO)"
+        : "Traffic Regulation Orders (TROs)",
       description: isTurkish
-        ? "Yol düzenleri, sokak tasarımları, kavşak geometrileri ve kamusal alan iyileştirmeleri için uygulanabilir tasarım çözümleri."
-        : "Practical design solutions for road layouts, streetscapes, junction geometry and public realm improvements.",
-      icon: Route,
+        ? "Park kontrolleri, bekleme ve yükleme kısıtlamaları, Okul Sokakları, hız yönetimi tedbirleri ile ilgili trafik işaretleri ve yol çizgilerini içeren TRO projelerinin tasarımı, geliştirilmesi ve uygulanması."
+        : "Design, development and delivery of TRO schemes, including parking controls, waiting and loading restrictions, School Streets, speed management measures and associated traffic signing and road markings.",
+      icon: Map,
     },
-
   ];
 
   return (
@@ -80,14 +89,14 @@ export default function ExpertiseSection({
 
           <h2 className="mt-4 font-[var(--font-space-grotesk)] text-4xl font-bold tracking-tight md:text-5xl">
             {isTurkish
-              ? "Güvenli ve verimli ulaşım hareketine odaklanan trafik mühendisliği uzmanlığı."
-              : "Traffic engineering expertise focused on safe and efficient movement."}
+              ? "Güvenli, erişilebilir ve sürdürülebilir ulaşım çözümlerine odaklanan trafik mühendisliği uzmanlığı."
+              : "Traffic engineering expertise focused on safe, accessible and sustainable transport solutions."}
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
             {isTurkish
-              ? "Çalışmalarım; yayaları, bisiklet kullanıcılarını, toplu taşıma kullanıcılarını ve araçları destekleyen pratik mühendislik çözümlerine odaklanmaktadır."
-              : "My work focuses on practical engineering solutions that support pedestrians, cyclists, public transport users and vehicles within often constrained urban street environments."}
+              ? "Çalışmalarım, kısıtlı kentsel sokak ortamlarında yayaları, bisiklet kullanıcılarını, toplu taşımayı ve araç hareketliliğini destekleyen uygulanabilir mühendislik çözümleri sunmaya odaklanmaktadır."
+              : "My work focuses on delivering practical engineering solutions that support pedestrians, cyclists, public transport and vehicular movement within constrained urban street environments."}
           </p>
         </Reveal>
 

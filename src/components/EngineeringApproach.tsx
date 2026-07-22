@@ -25,7 +25,7 @@ export default function EngineeringApproach({
 
               <h2 className="mt-4 font-[var(--font-space-grotesk)] text-4xl font-bold tracking-tight">
                 {isTurkish
-                  ? "Daha güvenli ve erişilebilir kamusal alanlar için pratik tasarım kararları."
+                  ? "Daha güvenli ve erişilebilir kamusal alanlar oluşturmak için uygulanabilir tasarım çözümleri ve stratejileri."
                   : "Practical design decisions for safer and more accessible public spaces."}
               </h2>
             </div>
@@ -33,37 +33,37 @@ export default function EngineeringApproach({
 
           <Reveal delay={0.12}>
             <div className="space-y-5">
-              {[
-                isTurkish
-                  ? "Yayalar, bisiklet kullanıcıları ve araçlar için güvenlik odaklı tasarım."
-                  : "Safety-led design for pedestrians, cyclists and vehicles.",
+            {[
+              isTurkish
+                ? "Yaya, bisiklet ve araç güvenliğini temel alan tasarım stratejileri"
+                : "Safety-led design for pedestrians, cyclists and vehicles.",
 
-                isTurkish
-                  ? "Kentsel çevrelerde kısıtlı yol alanlarının verimli kullanımı."
-                  : "Efficient use of constrained road space in urban environments.",
+              isTurkish
+                ? "Kentsel alanlarda sınırlı yol kapasitesinin en verimli şekilde değerlendirilmesi"
+                : "Efficient use of constrained road space in urban environments.",
 
-                isTurkish
-                  ? "Modelleme ve analiz yoluyla kanıta dayalı karar verme."
-                  : "Evidence-based decision making through modelling and analysis.",
+              isTurkish
+                ? "Modelleme ve analitik çalışmalarla desteklenen kanıta dayalı karar süreçleri"
+                : "Evidence-based decision making through modelling and analysis.",
 
-                isTurkish
-                  ? "Toplulukların günlük hareketliliğini geliştiren erişilebilir sokaklar."
-                  : "Accessible streets that improve everyday movement for communities.",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex gap-4 transition hover:translate-x-2"
-                >
-                  <CheckCircle2
-                    className="mt-1 text-[#7EA629]"
-                    size={22}
-                  />
+              isTurkish
+                ? "Toplulukların günlük hareketliliğini güçlendiren erişilebilir ve işlevsel sokak düzenlemeleri"
+                : "Accessible streets that improve everyday movement for communities.",
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex gap-4 transition hover:translate-x-2"
+              >
+                <CheckCircle2
+                  className="mt-1 text-[#7EA629]"
+                  size={22}
+                />
 
-                  <p className="text-lg leading-8 text-slate-700">
-                    {item}
-                  </p>
-                </div>
-              ))}
+                <p className="text-lg leading-8 text-slate-700">
+                  {item}
+                </p>
+              </div>
+            ))}
             </div>
           </Reveal>
 

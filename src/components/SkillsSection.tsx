@@ -29,10 +29,6 @@ const skills = [
     : "Transport Modelling & Analysis",
 
   isTurkish
-    ? "Karayolu ve Aktif Ulaşım Tasarımı"
-    : "Highway & Active Travel Design",
-
-  isTurkish
     ? "Problem Çözme Yeteneği"
     : "Problem-Solving Ability",
 
@@ -53,6 +49,26 @@ const skills = [
     : "Traffic Simulation",
 
   isTurkish
+    ? "Remix Streets"
+    : "Remix Streets",
+
+  isTurkish
+    ? "Trafik İşaretleri ve Yol Çizgileri Tasarımı"
+    : "Signing & Road Markings Design",
+
+  isTurkish
+    ? "Kavşak Tasarımı"
+    : "Junction Design",
+
+  isTurkish
+    ? "Kalite Güvencesi"
+    : "Quality Assurance",
+
+  isTurkish
+    ? "Trafik Verisi Analizi"
+    : "Traffic Data Analysis",
+
+  isTurkish
     ? "Takım Çalışması ve Liderlik"
     : "Teamwork & Leadership",
 
@@ -61,7 +77,7 @@ const skills = [
     : "Time Management",
 
   isTurkish
-    ? "Uyumluluk ve Standart Bilgisi"
+    ? "Yasal Uyum ve Standard Bilgisi"
     : "Compliance & Standards Knowledge",
 
   isTurkish
@@ -69,7 +85,7 @@ const skills = [
     : "Adaptability",
 
   isTurkish
-    ? "Güvenlik Farkındalığı"
+    ? "İş Güvenliği Farkındalığı"
     : "Safety Awareness",
 
   isTurkish
@@ -80,7 +96,6 @@ const skills = [
     ? "İletişim"
     : "Communication",
 ];
-
   return (
     <section
       id="skills"

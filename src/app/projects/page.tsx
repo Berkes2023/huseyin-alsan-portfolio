@@ -319,6 +319,16 @@ export default function ProjectsPage() {
                 ? "Ulaşım planlama, trafik mühendisliği, aktif ulaşım, TRO tasarımı, modelleme ve altyapı geliştirme alanlarındaki seçilmiş mühendislik projeleri."
                 : "Selected engineering projects across transport planning, traffic engineering, active travel, modelling and infrastructure development."}
             </p>
+            <div className="mt-10">
+              <Link
+                href="/#contact"
+                className="inline-flex items-center justify-center rounded-xl border border-[#B6D957]/30 bg-[#B6D957] px-6 py-3 text-sm font-semibold text-[#003C3F] transition duration-300 hover:bg-[#CBEA6A]"
+              >
+                {isTurkish
+                  ? "Sorular ve CV İçin İletişime Geçin"
+                  : "Get In Touch for Enquiries and CV"}
+              </Link>
+            </div>
           </header>
         </Reveal>
 

@@ -98,18 +98,18 @@ export default function HeroSection({ isTurkish }: HeroSectionProps) {
             ref={introRef}
             className="font-[var(--font-space-grotesk)] text-lg font-bold text-white sm:text-xl"
           >
-            {isTurkish ? "Merhaba, ben " : "Hi, I am "}
+          {isTurkish ? "Merhaba, ben " : "Hi, I am "}
 
-            <span ref={nameRef} className="text-white">
-              Huseyin Alsan
-            </span>
+          <span ref={nameRef} className="text-white">
+            {isTurkish ? "Hüseyin Alşan" : "Huseyin Alsan"}
+          </span>
 
             !
           </p>
 
           <h1 className="mt-5 max-w-3xl font-[var(--font-space-grotesk)] text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-7xl">
             {isTurkish
-              ? "Daha güvenli, daha akıllı ve daha erişilebilir sokaklar tasarlıyorum."
+              ? "Şehirlerin geleceğini güvenlik, erişilebilirlik ve yenilikçi çözümlerle tasarlıyorum."
               : "Designing safer, smarter and more accessible streets."}
           </h1>
 
@@ -132,7 +132,9 @@ export default function HeroSection({ isTurkish }: HeroSectionProps) {
               href="#contact"
               className="inline-flex w-full items-center justify-center rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-[#003C3F] sm:w-auto"
             >
-              {isTurkish ? "İletişim" : "Contact"}
+              {isTurkish
+              ? "Sorular ve CV İçin İletişim"
+              : "Contact for Enquiries and CV"}
             </a>
           </div>
         </div>

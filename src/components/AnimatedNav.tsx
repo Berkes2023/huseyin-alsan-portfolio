@@ -33,7 +33,7 @@ export default function AnimatedNav({ isTurkish }: AnimatedNavProps) {
             hover:text-[#CBEA6A]
           "
         >
-          HUSEYIN ALSAN
+          {isTurkish ? "Hüseyin Alşan" : "HUSEYIN ALSAN"}
         </Link>
 
 

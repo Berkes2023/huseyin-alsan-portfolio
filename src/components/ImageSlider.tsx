@@ -9,14 +9,14 @@ type Props = {
 };
 
 const galleryImages = [
-  "/images/Image1.webp",
-  "/images/Image2.webp",
-  "/images/Image3.webp",
+  "/images/Image6.webp",
   "/images/Image4.webp",
   "/images/Image5.webp",
-  "/images/Image6.webp",
   "/images/Image7.webp",
+  "/images/Image3.webp",
   "/images/Image8.webp",
+  "/images/Image1.webp",
+  "/images/Image2.webp",
 ];
 
 export default function ImageSlider({ isTurkish }: Props) {
