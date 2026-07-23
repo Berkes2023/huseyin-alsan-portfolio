@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+
 import { Globe2 } from "lucide-react";
 
 import AnimatedNav from "@/components/AnimatedNav";
@@ -12,10 +12,10 @@ import SkillsSection from "@/components/SkillsSection";
 import EngineeringApproach from "@/components/EngineeringApproach";
 import ImageSlider from "@/components/ImageSlider";
 import ContactSection from "@/components/ContactSection";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Home() {
-  const [language, setLanguage] = useState<"en" | "tr">("en");
-  const isTurkish = language === "tr";
+const { isTurkish, toggleLanguage } = useLanguage();
 
   return (
     <>
@@ -25,7 +25,7 @@ export default function Home() {
         <ScrollProgress />
 
         <button
-          onClick={() => setLanguage(isTurkish ? "en" : "tr")}
+         onClick={toggleLanguage}
           className="fixed bottom-6 right-6 z-[999] inline-flex items-center gap-3 rounded-full border border-white/15 bg-[#002C2F]/90 px-5 py-3 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-2xl backdrop-blur-xl transition hover:border-[#B6D957] hover:text-[#B6D957]"
         >
           <Globe2 size={18} />

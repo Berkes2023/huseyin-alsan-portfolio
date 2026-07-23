@@ -25,11 +25,11 @@ export default function ContactSection({
           {/* Left */}
           <Reveal>
             <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#B6D957]">
-              {isTurkish
-                ? "Sorular ve CV İçin İletişime Geçin"
-                : "Get In Touch for Enquiries and CV"}
-            </p>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#B6D957]">
+            {isTurkish
+              ? "SORULAR VE CV İÇİN İLETİŞİME GEÇİN"
+              : "GET IN TOUCH FOR ENQUIRIES AND CV"}
+          </p>
 
               <h2 className="mt-4 font-[var(--font-space-grotesk)] text-5xl font-bold tracking-tight">
                 {isTurkish

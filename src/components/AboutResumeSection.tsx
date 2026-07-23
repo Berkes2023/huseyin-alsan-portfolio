@@ -30,7 +30,7 @@ const resumeExperience = [
 
   {
     role: isTurkish
-      ? "Mühendislik Stajyeri"
+      ? "Stajyer Mühendis"
       : "Engineering Intern",
     company: "Tasyapi Insaat",
     date: isTurkish
@@ -40,7 +40,7 @@ const resumeExperience = [
 
   {
     role: isTurkish
-      ? "Mühendislik Stajyeri"
+      ? "Stajyer Mühendis"
       : "Engineering Intern",
     company: isTurkish
       ? "Ulaştırma ve Altyapı Bakanlığı Planlama ve İnşaat Dairesi"
@@ -98,7 +98,7 @@ const resumeExperience = [
 
                   <p>
                     {isTurkish
-                      ? "Ben Huseyin Alsan. İnşaat Mühendisliği ve Ulaşım Planlama alanlarında altyapıya sahip deneyimli ve tutkulu bir Trafik Mühendisiyim."
+                      ? "Ben Hüseyin Alşan. İnşaat Mühendisliği ve Ulaşım Planlama alanlarında altyapıya sahip deneyimli ve tutkulu bir Trafik Mühendisiyim."
                       : "My name is Huseyin Alsan and I am an experienced and passionate Traffic Engineer with a background in Civil Engineering and Transportation Planning."}
                   </p>
 
@@ -155,9 +155,9 @@ const resumeExperience = [
           <div className="grid gap-16 lg:grid-cols-[0.7fr_1.3fr]">
             <Reveal>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#B6D957]">
-                  {isTurkish ? "Özgeçmiş" : "Resume"}
-                </p>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#B6D957]">
+              {isTurkish ? "ÖZGEÇMİŞ" : "RESUME"}
+            </p>
 
                 <h2 className="mt-4 font-[var(--font-space-grotesk)] text-5xl font-bold tracking-tight text-white md:text-6xl">
                   {isTurkish

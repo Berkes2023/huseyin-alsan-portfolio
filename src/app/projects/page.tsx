@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import ProjectHoverCard from "@/components/ProjectHoverCard";
+import { useLanguage } from "@/components/LanguageProvider";
 
 import {
   ArrowLeft,
@@ -387,8 +387,8 @@ const projectsData = (isTurkish: boolean) => [
 ];
 
 export default function ProjectsPage() {
-  const [language, setLanguage] = useState<"en" | "tr">("en");
-  const isTurkish = language === "tr";
+  const { isTurkish, toggleLanguage } = useLanguage();
+
   const projects = projectsData(isTurkish);
 
   return (
@@ -504,7 +504,7 @@ export default function ProjectsPage() {
 
       <button
         type="button"
-        onClick={() => setLanguage(isTurkish ? "en" : "tr")}
+        onClick={toggleLanguage}
         className="fixed bottom-6 right-6 z-[999] inline-flex items-center gap-3 rounded-full border border-white/15 bg-[#002C2F]/90 px-5 py-3 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-2xl backdrop-blur-xl transition hover:border-[#B6D957] hover:text-[#B6D957]"
         aria-label={isTurkish ? "Switch to English" : "Türkçeye geç"}
       >
