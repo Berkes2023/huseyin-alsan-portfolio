@@ -17,6 +17,8 @@ const galleryImages = [
   "/images/Image8.webp",
   "/images/Image1.webp",
   "/images/Image2.webp",
+  "/images/Image9.webp",
+  "/images/Image10.webp",
 ];
 
 export default function ImageSlider({ isTurkish }: Props) {
