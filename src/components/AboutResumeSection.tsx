@@ -20,12 +20,22 @@ export default function AboutResumeSection({
 const resumeExperience = [
   {
     role: isTurkish
+      ? "Altyapı İnşaat Mühendisi"
+      : "Infrastructure Civil Engineer",
+    company: "ARUP",
+    date: isTurkish
+      ? "Eyl 2026 – Günümüz"
+      : "Sep 2026 – Present",
+  },
+
+  {
+    role: isTurkish
       ? "Trafik Mühendisi"
       : "Traffic Engineer",
     company: "AECOM",
     date: isTurkish
-      ? "Eki 2023 – Günümüz"
-      : "Oct 2023 – Present",
+      ? "Eki 2023 – Ağu 2026"
+      : "Oct 2023 – Aug 2026",
   },
 
   {
